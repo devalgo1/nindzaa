@@ -1,0 +1,1920 @@
+INFO ESPHome 2024.4.2
+INFO Reading configuration /config/esphome/word3.yaml...
+WARNING GPIO3 is a strapping PIN and should only be used for I/O with care.
+Attaching external pullup/down resistors to strapping pins can cause unexpected failures.
+See https://esphome.io/guides/faq.html#why-am-i-getting-a-warning-about-strapping-pins
+INFO Generating C++ source...
+INFO Updating https://github.com/espressif/esp-tflite-micro@None
+INFO Compiling app...
+Processing wake-word-test3 (board: esp32-s3-devkitc-1; framework: espidf; platform: platformio/espressif32@5.4.0)
+--------------------------------------------------------------------------------
+HARDWARE: ESP32S3 240MHz, 320KB RAM, 8MB Flash
+ - framework-espidf @ 3.40406.240122 (4.4.6) 
+ - tool-cmake @ 3.16.4 
+ - tool-ninja @ 1.7.1 
+ - toolchain-esp32ulp @ 2.35.0-20220830 
+ - toolchain-riscv32-esp @ 8.4.0+2021r2-patch5 
+ - toolchain-xtensa-esp32s3 @ 8.4.0+2021r2-patch5
+Reading CMake configuration...
+Generating assembly for certificate bundle...
+Dependency Graph
+|-- noise-c @ 0.1.4
+|-- ArduinoJson @ 6.18.5
+Compiling .pioenvs/wake-word-test3/src/esphome/components/api/api_connection.o
+Compiling .pioenvs/wake-word-test3/src/esphome/components/api/api_frame_helper.o
+Compiling .pioenvs/wake-word-test3/src/esphome/components/api/api_pb2.o
+Compiling .pioenvs/wake-word-test3/src/esphome/components/api/api_pb2_service.o
+Compiling .pioenvs/wake-word-test3/src/esphome/components/api/api_server.o
+Compiling .pioenvs/wake-word-test3/src/esphome/components/api/list_entities.o
+Compiling .pioenvs/wake-word-test3/src/esphome/components/api/proto.o
+Compiling .pioenvs/wake-word-test3/src/esphome/components/api/subscribe_state.o
+Compiling .pioenvs/wake-word-test3/src/esphome/components/api/user_services.o
+Compiling .pioenvs/wake-word-test3/src/esphome/components/button/button.o
+Compiling .pioenvs/wake-word-test3/src/esphome/components/captive_portal/captive_portal.o
+Compiling .pioenvs/wake-word-test3/src/esphome/components/esp32/core.o
+Compiling .pioenvs/wake-word-test3/src/esphome/components/esp32/gpio.o
+Compiling .pioenvs/wake-word-test3/src/esphome/components/esp32/preferences.o
+Compiling .pioenvs/wake-word-test3/src/esphome/components/esp32_rmt_led_strip/led_strip.o
+Compiling .pioenvs/wake-word-test3/src/esphome/components/gpio/switch/gpio_switch.o
+Compiling .pioenvs/wake-word-test3/src/esphome/components/i2s_audio/i2s_audio.o
+Compiling .pioenvs/wake-word-test3/src/esphome/components/i2s_audio/microphone/i2s_audio_microphone.o
+Compiling .pioenvs/wake-word-test3/src/esphome/components/i2s_audio/speaker/i2s_audio_speaker.o
+src/esphome/components/i2s_audio/microphone/i2s_audio_microphone.cpp: In member function 'void esphome::i2s_audio::I2SAudioMicrophone::start_()':
+src/esphome/components/i2s_audio/microphone/i2s_audio_microphone.cpp:62:3: warning: missing initializer for member 'i2s_driver_config_t::chan_mask' [-Wmissing-field-initializers]
+   };
+   ^
+src/esphome/components/i2s_audio/microphone/i2s_audio_microphone.cpp:62:3: warning: missing initializer for member 'i2s_driver_config_t::total_chan' [-Wmissing-field-initializers]
+src/esphome/components/i2s_audio/microphone/i2s_audio_microphone.cpp:62:3: warning: missing initializer for member 'i2s_driver_config_t::left_align' [-Wmissing-field-initializers]
+src/esphome/components/i2s_audio/microphone/i2s_audio_microphone.cpp:62:3: warning: missing initializer for member 'i2s_driver_config_t::big_edin' [-Wmissing-field-initializers]
+src/esphome/components/i2s_audio/microphone/i2s_audio_microphone.cpp:62:3: warning: missing initializer for member 'i2s_driver_config_t::bit_order_msb' [-Wmissing-field-initializers]
+src/esphome/components/i2s_audio/microphone/i2s_audio_microphone.cpp:62:3: warning: missing initializer for member 'i2s_driver_config_t::skip_msk' [-Wmissing-field-initializers]
+Compiling .pioenvs/wake-word-test3/src/esphome/components/json/json_util.o
+src/esphome/components/i2s_audio/speaker/i2s_audio_speaker.cpp: In static member function 'static void esphome::i2s_audio::I2SAudioSpeaker::player_task(void*)':
+src/esphome/components/i2s_audio/speaker/i2s_audio_speaker.cpp:56:3: warning: missing initializer for member 'i2s_driver_config_t::chan_mask' [-Wmissing-field-initializers]
+   };
+   ^
+src/esphome/components/i2s_audio/speaker/i2s_audio_speaker.cpp:56:3: warning: missing initializer for member 'i2s_driver_config_t::total_chan' [-Wmissing-field-initializers]
+src/esphome/components/i2s_audio/speaker/i2s_audio_speaker.cpp:56:3: warning: missing initializer for member 'i2s_driver_config_t::left_align' [-Wmissing-field-initializers]
+src/esphome/components/i2s_audio/speaker/i2s_audio_speaker.cpp:56:3: warning: missing initializer for member 'i2s_driver_config_t::big_edin' [-Wmissing-field-initializers]
+src/esphome/components/i2s_audio/speaker/i2s_audio_speaker.cpp:56:3: warning: missing initializer for member 'i2s_driver_config_t::bit_order_msb' [-Wmissing-field-initializers]
+src/esphome/components/i2s_audio/speaker/i2s_audio_speaker.cpp:56:3: warning: missing initializer for member 'i2s_driver_config_t::skip_msk' [-Wmissing-field-initializers]
+Compiling .pioenvs/wake-word-test3/src/esphome/components/light/addressable_light.o
+Compiling .pioenvs/wake-word-test3/src/esphome/components/light/automation.o
+Compiling .pioenvs/wake-word-test3/src/esphome/components/light/esp_color_correction.o
+Compiling .pioenvs/wake-word-test3/src/esphome/components/light/esp_hsv_color.o
+Compiling .pioenvs/wake-word-test3/src/esphome/components/light/esp_range_view.o
+Compiling .pioenvs/wake-word-test3/src/esphome/components/light/light_call.o
+Compiling .pioenvs/wake-word-test3/src/esphome/components/light/light_json_schema.o
+Compiling .pioenvs/wake-word-test3/src/esphome/components/light/light_output.o
+Compiling .pioenvs/wake-word-test3/src/esphome/components/light/light_state.o
+Compiling .pioenvs/wake-word-test3/src/esphome/components/logger/logger.o
+Compiling .pioenvs/wake-word-test3/src/esphome/components/logger/logger_esp32.o
+Compiling .pioenvs/wake-word-test3/src/esphome/components/logger/logger_esp8266.o
+Compiling .pioenvs/wake-word-test3/src/esphome/components/logger/logger_host.o
+Compiling .pioenvs/wake-word-test3/src/esphome/components/logger/logger_libretiny.o
+Compiling .pioenvs/wake-word-test3/src/esphome/components/logger/logger_rp2040.o
+Compiling .pioenvs/wake-word-test3/src/esphome/components/md5/md5.o
+Compiling .pioenvs/wake-word-test3/src/esphome/components/mdns/mdns_component.o
+Compiling .pioenvs/wake-word-test3/src/esphome/components/mdns/mdns_esp32.o
+Compiling .pioenvs/wake-word-test3/src/esphome/components/mdns/mdns_esp8266.o
+Compiling .pioenvs/wake-word-test3/src/esphome/components/mdns/mdns_host.o
+Compiling .pioenvs/wake-word-test3/src/esphome/components/mdns/mdns_libretiny.o
+Compiling .pioenvs/wake-word-test3/src/esphome/components/mdns/mdns_rp2040.o
+Compiling .pioenvs/wake-word-test3/src/esphome/components/micro_wake_word/micro_wake_word.o
+Compiling .pioenvs/wake-word-test3/src/esphome/components/network/util.o
+Compiling .pioenvs/wake-word-test3/src/esphome/components/ota/ota_backend_arduino_esp32.o
+Compiling .pioenvs/wake-word-test3/src/esphome/components/ota/ota_backend_arduino_esp8266.o
+Compiling .pioenvs/wake-word-test3/src/esphome/components/ota/ota_backend_arduino_libretiny.o
+Compiling .pioenvs/wake-word-test3/src/esphome/components/ota/ota_backend_arduino_rp2040.o
+Compiling .pioenvs/wake-word-test3/src/esphome/components/ota/ota_backend_esp_idf.o
+Compiling .pioenvs/wake-word-test3/src/esphome/components/ota/ota_component.o
+Compiling .pioenvs/wake-word-test3/src/esphome/components/psram/psram.o
+Compiling .pioenvs/wake-word-test3/src/esphome/components/restart/button/restart_button.o
+Compiling .pioenvs/wake-word-test3/src/esphome/components/socket/bsd_sockets_impl.o
+Compiling .pioenvs/wake-word-test3/src/esphome/components/socket/lwip_raw_tcp_impl.o
+Compiling .pioenvs/wake-word-test3/src/esphome/components/socket/lwip_sockets_impl.o
+src/esphome/components/micro_wake_word/micro_wake_word.cpp:37:25: warning: 'const esphome::LogString* esphome::micro_wake_word::micro_wake_word_state_to_string(esphome::micro_wake_word::State)' defined but not used [-Wunused-function]
+ static const LogString *micro_wake_word_state_to_string(State state) {
+                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Compiling .pioenvs/wake-word-test3/src/esphome/components/socket/socket.o
+Compiling .pioenvs/wake-word-test3/src/esphome/components/switch/automation.o
+Compiling .pioenvs/wake-word-test3/src/esphome/components/switch/switch.o
+Compiling .pioenvs/wake-word-test3/src/esphome/components/template/switch/template_switch.o
+Compiling .pioenvs/wake-word-test3/src/esphome/components/web_server/list_entities.o
+Compiling .pioenvs/wake-word-test3/src/esphome/components/web_server/web_server.o
+Compiling .pioenvs/wake-word-test3/src/esphome/components/web_server_base/web_server_base.o
+Compiling .pioenvs/wake-word-test3/src/esphome/components/web_server_idf/utils.o
+Compiling .pioenvs/wake-word-test3/src/esphome/components/web_server_idf/web_server_idf.o
+Compiling .pioenvs/wake-word-test3/src/esphome/components/wifi/wifi_component.o
+Compiling .pioenvs/wake-word-test3/src/esphome/components/wifi/wifi_component_esp32_arduino.o
+Compiling .pioenvs/wake-word-test3/src/esphome/components/wifi/wifi_component_esp8266.o
+Compiling .pioenvs/wake-word-test3/src/esphome/components/wifi/wifi_component_esp_idf.o
+Compiling .pioenvs/wake-word-test3/src/esphome/components/wifi/wifi_component_libretiny.o
+Compiling .pioenvs/wake-word-test3/src/esphome/components/wifi/wifi_component_pico_w.o
+Compiling .pioenvs/wake-word-test3/src/esphome/core/application.o
+Compiling .pioenvs/wake-word-test3/src/esphome/core/color.o
+Compiling .pioenvs/wake-word-test3/src/esphome/core/component.o
+Compiling .pioenvs/wake-word-test3/src/esphome/core/component_iterator.o
+Compiling .pioenvs/wake-word-test3/src/esphome/core/controller.o
+Compiling .pioenvs/wake-word-test3/src/esphome/core/entity_base.o
+Compiling .pioenvs/wake-word-test3/src/esphome/core/helpers.o
+Compiling .pioenvs/wake-word-test3/src/esphome/core/log.o
+Compiling .pioenvs/wake-word-test3/src/esphome/core/ring_buffer.o
+Compiling .pioenvs/wake-word-test3/src/esphome/core/scheduler.o
+Compiling .pioenvs/wake-word-test3/src/esphome/core/string_ref.o
+Compiling .pioenvs/wake-word-test3/src/esphome/core/time.o
+Compiling .pioenvs/wake-word-test3/src/esphome/core/util.o
+Compiling .pioenvs/wake-word-test3/src/main.o
+Generating LD script .pioenvs/wake-word-test3/memory.ld
+Compiling .pioenvs/wake-word-test3/app_trace/app_trace.o
+Compiling .pioenvs/wake-word-test3/app_trace/app_trace_util.o
+Compiling .pioenvs/wake-word-test3/app_trace/host_file_io.o
+Compiling .pioenvs/wake-word-test3/app_trace/gcov/gcov_rtio.o
+Archiving .pioenvs/wake-word-test3/esp-idf/app_trace/libapp_trace.a
+Compiling .pioenvs/wake-word-test3/app_update/esp_ota_ops.o
+Compiling .pioenvs/wake-word-test3/app_update/esp_app_desc.o
+Archiving .pioenvs/wake-word-test3/esp-idf/app_update/libapp_update.a
+Compiling .pioenvs/wake-word-test3/asio/asio/asio/src/asio.o
+Archiving .pioenvs/wake-word-test3/esp-idf/asio/libasio.a
+Compiling .pioenvs/wake-word-test3/bootloader_support/src/bootloader_common.o
+Compiling .pioenvs/wake-word-test3/bootloader_support/src/bootloader_common_loader.o
+Compiling .pioenvs/wake-word-test3/bootloader_support/src/bootloader_clock_init.o
+Compiling .pioenvs/wake-word-test3/bootloader_support/src/bootloader_flash.o
+Compiling .pioenvs/wake-word-test3/bootloader_support/src/bootloader_mem.o
+Compiling .pioenvs/wake-word-test3/bootloader_support/src/bootloader_random.o
+Compiling .pioenvs/wake-word-test3/bootloader_support/src/bootloader_random_esp32s3.o
+Compiling .pioenvs/wake-word-test3/bootloader_support/src/bootloader_utility.o
+Compiling .pioenvs/wake-word-test3/bootloader_support/src/esp_image_format.o
+Compiling .pioenvs/wake-word-test3/bootloader_support/src/flash_encrypt.o
+Compiling .pioenvs/wake-word-test3/bootloader_support/src/secure_boot.o
+Compiling .pioenvs/wake-word-test3/bootloader_support/src/flash_partitions.o
+Compiling .pioenvs/wake-word-test3/bootloader_support/src/flash_qio_mode.o
+Compiling .pioenvs/wake-word-test3/bootloader_support/src/bootloader_flash_config_esp32s3.o
+Compiling .pioenvs/wake-word-test3/bootloader_support/src/bootloader_efuse.o
+Compiling .pioenvs/wake-word-test3/bootloader_support/src/idf/bootloader_sha.o
+Archiving .pioenvs/wake-word-test3/esp-idf/bootloader_support/libbootloader_support.a
+Compiling .pioenvs/wake-word-test3/cbor/tinycbor/src/cborencoder_close_container_checked.o
+Compiling .pioenvs/wake-word-test3/cbor/tinycbor/src/cborencoder.o
+Compiling .pioenvs/wake-word-test3/cbor/tinycbor/src/cborerrorstrings.o
+Compiling .pioenvs/wake-word-test3/cbor/tinycbor/src/cborparser_dup_string.o
+Compiling .pioenvs/wake-word-test3/cbor/tinycbor/src/cborparser.o
+Compiling .pioenvs/wake-word-test3/cbor/tinycbor/src/cborpretty_stdio.o
+Compiling .pioenvs/wake-word-test3/cbor/tinycbor/src/cborpretty.o
+Compiling .pioenvs/wake-word-test3/cbor/tinycbor/src/cbortojson.o
+Compiling .pioenvs/wake-word-test3/cbor/tinycbor/src/cborvalidation.o
+Compiling .pioenvs/wake-word-test3/cbor/tinycbor/src/open_memstream.o
+Archiving .pioenvs/wake-word-test3/esp-idf/cbor/libcbor.a
+Compiling .pioenvs/wake-word-test3/cmock/CMock/src/cmock.o
+Archiving .pioenvs/wake-word-test3/esp-idf/cmock/libcmock.a
+Compiling .pioenvs/wake-word-test3/coap/libcoap/src/address.o
+Compiling .pioenvs/wake-word-test3/coap/libcoap/src/async.o
+Compiling .pioenvs/wake-word-test3/coap/libcoap/src/block.o
+Compiling .pioenvs/wake-word-test3/coap/libcoap/src/coap_asn1.o
+Compiling .pioenvs/wake-word-test3/coap/libcoap/src/coap_cache.o
+Compiling .pioenvs/wake-word-test3/coap/libcoap/src/coap_debug.o
+Compiling .pioenvs/wake-word-test3/coap/libcoap/src/coap_event.o
+Compiling .pioenvs/wake-word-test3/coap/libcoap/src/coap_hashkey.o
+Compiling .pioenvs/wake-word-test3/coap/libcoap/src/coap_io.o
+Compiling .pioenvs/wake-word-test3/coap/libcoap/src/coap_mbedtls.o
+Compiling .pioenvs/wake-word-test3/coap/libcoap/src/coap_notls.o
+Compiling .pioenvs/wake-word-test3/coap/libcoap/src/coap_prng.o
+Compiling .pioenvs/wake-word-test3/coap/libcoap/src/coap_session.o
+Compiling .pioenvs/wake-word-test3/coap/libcoap/src/coap_tcp.o
+Compiling .pioenvs/wake-word-test3/coap/libcoap/src/coap_time.o
+Compiling .pioenvs/wake-word-test3/coap/libcoap/src/encode.o
+Compiling .pioenvs/wake-word-test3/coap/libcoap/src/mem.o
+Compiling .pioenvs/wake-word-test3/coap/libcoap/src/net.o
+Compiling .pioenvs/wake-word-test3/coap/libcoap/src/option.o
+Compiling .pioenvs/wake-word-test3/coap/libcoap/src/pdu.o
+Compiling .pioenvs/wake-word-test3/coap/libcoap/src/resource.o
+Compiling .pioenvs/wake-word-test3/coap/libcoap/src/str.o
+Compiling .pioenvs/wake-word-test3/coap/libcoap/src/subscribe.o
+Compiling .pioenvs/wake-word-test3/coap/libcoap/src/uri.o
+Compiling .pioenvs/wake-word-test3/console/commands.o
+Archiving .pioenvs/wake-word-test3/esp-idf/coap/libcoap.a
+Compiling .pioenvs/wake-word-test3/console/esp_console_repl.o
+Compiling .pioenvs/wake-word-test3/console/split_argv.o
+Compiling .pioenvs/wake-word-test3/console/linenoise/linenoise.o
+Compiling .pioenvs/wake-word-test3/console/argtable3/arg_cmd.o
+Compiling .pioenvs/wake-word-test3/console/argtable3/arg_date.o
+Compiling .pioenvs/wake-word-test3/console/argtable3/arg_dbl.o
+Compiling .pioenvs/wake-word-test3/console/argtable3/arg_dstr.o
+Compiling .pioenvs/wake-word-test3/console/argtable3/arg_end.o
+Compiling .pioenvs/wake-word-test3/console/argtable3/arg_file.o
+Compiling .pioenvs/wake-word-test3/console/argtable3/arg_hashtable.o
+Compiling .pioenvs/wake-word-test3/console/argtable3/arg_int.o
+Compiling .pioenvs/wake-word-test3/console/argtable3/arg_lit.o
+Compiling .pioenvs/wake-word-test3/console/argtable3/arg_rem.o
+Compiling .pioenvs/wake-word-test3/console/argtable3/arg_rex.o
+Compiling .pioenvs/wake-word-test3/console/argtable3/arg_str.o
+Compiling .pioenvs/wake-word-test3/console/argtable3/arg_utils.o
+Compiling .pioenvs/wake-word-test3/console/argtable3/argtable3.o
+Compiling .pioenvs/wake-word-test3/cxx/cxx_exception_stubs.o
+Compiling .pioenvs/wake-word-test3/cxx/cxx_guards.o
+Archiving .pioenvs/wake-word-test3/esp-idf/console/libconsole.a
+Compiling .pioenvs/wake-word-test3/driver/gpio.o
+Archiving .pioenvs/wake-word-test3/esp-idf/cxx/libcxx.a
+Compiling .pioenvs/wake-word-test3/driver/i2c.o
+Compiling .pioenvs/wake-word-test3/driver/i2s.o
+Compiling .pioenvs/wake-word-test3/driver/ledc.o
+Compiling .pioenvs/wake-word-test3/driver/pcnt.o
+Compiling .pioenvs/wake-word-test3/driver/periph_ctrl.o
+Compiling .pioenvs/wake-word-test3/driver/rmt.o
+Compiling .pioenvs/wake-word-test3/driver/rtc_io.o
+Compiling .pioenvs/wake-word-test3/driver/rtc_module.o
+Compiling .pioenvs/wake-word-test3/driver/sdspi_crc.o
+Compiling .pioenvs/wake-word-test3/driver/sdspi_host.o
+Compiling .pioenvs/wake-word-test3/driver/sdspi_transaction.o
+Compiling .pioenvs/wake-word-test3/driver/sigmadelta.o
+Compiling .pioenvs/wake-word-test3/driver/spi_common.o
+Compiling .pioenvs/wake-word-test3/driver/spi_master.o
+Compiling .pioenvs/wake-word-test3/driver/spi_slave.o
+Compiling .pioenvs/wake-word-test3/driver/spi_bus_lock.o
+Compiling .pioenvs/wake-word-test3/driver/timer.o
+Compiling .pioenvs/wake-word-test3/driver/twai.o
+Compiling .pioenvs/wake-word-test3/driver/uart.o
+Compiling .pioenvs/wake-word-test3/driver/adc_common.o
+Compiling .pioenvs/wake-word-test3/driver/adc.o
+Compiling .pioenvs/wake-word-test3/driver/dedic_gpio.o
+Compiling .pioenvs/wake-word-test3/driver/gdma.o
+Compiling .pioenvs/wake-word-test3/driver/sdmmc_host.o
+Compiling .pioenvs/wake-word-test3/driver/sdmmc_transaction.o
+Compiling .pioenvs/wake-word-test3/driver/mcpwm.o
+Compiling .pioenvs/wake-word-test3/driver/usb_serial_jtag.o
+Compiling .pioenvs/wake-word-test3/driver/spi_slave_hd.o
+Compiling .pioenvs/wake-word-test3/driver/touch_sensor_common.o
+Compiling .pioenvs/wake-word-test3/driver/esp32s3/touch_sensor.o
+Compiling .pioenvs/wake-word-test3/driver/esp32s3/rtc_tempsensor.o
+Compiling .pioenvs/wake-word-test3/efuse/esp32s3/esp_efuse_table.o
+Compiling .pioenvs/wake-word-test3/efuse/esp32s3/esp_efuse_fields.o
+Compiling .pioenvs/wake-word-test3/efuse/esp32s3/esp_efuse_rtc_calib.o
+Archiving .pioenvs/wake-word-test3/esp-idf/driver/libdriver.a
+Compiling .pioenvs/wake-word-test3/efuse/esp32s3/esp_efuse_utility.o
+Compiling .pioenvs/wake-word-test3/efuse/src/esp_efuse_api.o
+Compiling .pioenvs/wake-word-test3/efuse/src/esp_efuse_fields.o
+Compiling .pioenvs/wake-word-test3/efuse/src/esp_efuse_utility.o
+Compiling .pioenvs/wake-word-test3/efuse/src/esp_efuse_api_key_esp32xx.o
+Compiling .pioenvs/wake-word-test3/components/esp-tflite-micro/tensorflow/lite/micro/debug_log.o
+Archiving .pioenvs/wake-word-test3/esp-idf/efuse/libefuse.a
+Compiling .pioenvs/wake-word-test3/components/esp-tflite-micro/tensorflow/lite/micro/fake_micro_context.o
+Compiling .pioenvs/wake-word-test3/components/esp-tflite-micro/tensorflow/lite/micro/flatbuffer_utils.o
+Compiling .pioenvs/wake-word-test3/components/esp-tflite-micro/tensorflow/lite/micro/memory_helpers.o
+Compiling .pioenvs/wake-word-test3/components/esp-tflite-micro/tensorflow/lite/micro/micro_allocation_info.o
+Compiling .pioenvs/wake-word-test3/components/esp-tflite-micro/tensorflow/lite/micro/micro_allocator.o
+Compiling .pioenvs/wake-word-test3/components/esp-tflite-micro/tensorflow/lite/micro/micro_context.o
+Compiling .pioenvs/wake-word-test3/components/esp-tflite-micro/tensorflow/lite/micro/micro_interpreter.o
+Compiling .pioenvs/wake-word-test3/components/esp-tflite-micro/tensorflow/lite/micro/micro_interpreter_context.o
+Compiling .pioenvs/wake-word-test3/components/esp-tflite-micro/tensorflow/lite/micro/micro_interpreter_graph.o
+Compiling .pioenvs/wake-word-test3/components/esp-tflite-micro/tensorflow/lite/micro/micro_log.o
+Compiling .pioenvs/wake-word-test3/components/esp-tflite-micro/tensorflow/lite/micro/micro_op_resolver.o
+Compiling .pioenvs/wake-word-test3/components/esp-tflite-micro/tensorflow/lite/micro/micro_profiler.o
+Compiling .pioenvs/wake-word-test3/components/esp-tflite-micro/tensorflow/lite/micro/micro_resource_variable.o
+Compiling .pioenvs/wake-word-test3/components/esp-tflite-micro/tensorflow/lite/micro/micro_time.o
+Compiling .pioenvs/wake-word-test3/components/esp-tflite-micro/tensorflow/lite/micro/micro_utils.o
+Compiling .pioenvs/wake-word-test3/components/esp-tflite-micro/tensorflow/lite/micro/mock_micro_graph.o
+Compiling .pioenvs/wake-word-test3/components/esp-tflite-micro/tensorflow/lite/micro/recording_micro_allocator.o
+Compiling .pioenvs/wake-word-test3/components/esp-tflite-micro/tensorflow/lite/micro/system_setup.o
+Compiling .pioenvs/wake-word-test3/components/esp-tflite-micro/tensorflow/lite/micro/test_helper_custom_ops.o
+Compiling .pioenvs/wake-word-test3/components/esp-tflite-micro/tensorflow/lite/micro/test_helpers.o
+Compiling .pioenvs/wake-word-test3/components/esp-tflite-micro/tensorflow/lite/micro/kernels/activations.o
+Compiling .pioenvs/wake-word-test3/components/esp-tflite-micro/tensorflow/lite/micro/kernels/activations_common.o
+Compiling .pioenvs/wake-word-test3/components/esp-tflite-micro/tensorflow/lite/micro/kernels/add_common.o
+Compiling .pioenvs/wake-word-test3/components/esp-tflite-micro/tensorflow/lite/micro/kernels/add_n.o
+Compiling .pioenvs/wake-word-test3/components/esp-tflite-micro/tensorflow/lite/micro/kernels/arg_min_max.o
+Compiling .pioenvs/wake-word-test3/components/esp-tflite-micro/tensorflow/lite/micro/kernels/assign_variable.o
+Compiling .pioenvs/wake-word-test3/components/esp-tflite-micro/tensorflow/lite/micro/kernels/batch_matmul.o
+Compiling .pioenvs/wake-word-test3/components/esp-tflite-micro/tensorflow/lite/micro/kernels/batch_to_space_nd.o
+Compiling .pioenvs/wake-word-test3/components/esp-tflite-micro/tensorflow/lite/micro/kernels/broadcast_args.o
+Compiling .pioenvs/wake-word-test3/components/esp-tflite-micro/tensorflow/lite/micro/kernels/broadcast_to.o
+Compiling .pioenvs/wake-word-test3/components/esp-tflite-micro/tensorflow/lite/micro/kernels/call_once.o
+Compiling .pioenvs/wake-word-test3/components/esp-tflite-micro/tensorflow/lite/micro/kernels/cast.o
+Compiling .pioenvs/wake-word-test3/components/esp-tflite-micro/tensorflow/lite/micro/kernels/ceil.o
+Compiling .pioenvs/wake-word-test3/components/esp-tflite-micro/tensorflow/lite/micro/kernels/circular_buffer.o
+Compiling .pioenvs/wake-word-test3/components/esp-tflite-micro/tensorflow/lite/micro/kernels/circular_buffer_common.o
+Compiling .pioenvs/wake-word-test3/components/esp-tflite-micro/tensorflow/lite/micro/kernels/comparisons.o
+Compiling .pioenvs/wake-word-test3/components/esp-tflite-micro/tensorflow/lite/micro/kernels/concatenation.o
+Compiling .pioenvs/wake-word-test3/components/esp-tflite-micro/tensorflow/lite/micro/kernels/conv_common.o
+Compiling .pioenvs/wake-word-test3/components/esp-tflite-micro/tensorflow/lite/micro/kernels/cumsum.o
+Compiling .pioenvs/wake-word-test3/components/esp-tflite-micro/tensorflow/lite/micro/kernels/depth_to_space.o
+Compiling .pioenvs/wake-word-test3/components/esp-tflite-micro/tensorflow/lite/micro/kernels/depthwise_conv_common.o
+Compiling .pioenvs/wake-word-test3/components/esp-tflite-micro/tensorflow/lite/micro/kernels/dequantize.o
+Compiling .pioenvs/wake-word-test3/components/esp-tflite-micro/tensorflow/lite/micro/kernels/dequantize_common.o
+Compiling .pioenvs/wake-word-test3/components/esp-tflite-micro/tensorflow/lite/micro/kernels/detection_postprocess.o
+Compiling .pioenvs/wake-word-test3/components/esp-tflite-micro/tensorflow/lite/micro/kernels/div.o
+Compiling .pioenvs/wake-word-test3/components/esp-tflite-micro/tensorflow/lite/micro/kernels/elementwise.o
+Compiling .pioenvs/wake-word-test3/components/esp-tflite-micro/tensorflow/lite/micro/kernels/elu.o
+Compiling .pioenvs/wake-word-test3/components/esp-tflite-micro/tensorflow/lite/micro/kernels/embedding_lookup.o
+Compiling .pioenvs/wake-word-test3/components/esp-tflite-micro/tensorflow/lite/micro/kernels/ethosu.o
+Compiling .pioenvs/wake-word-test3/components/esp-tflite-micro/tensorflow/lite/micro/kernels/exp.o
+Compiling .pioenvs/wake-word-test3/components/esp-tflite-micro/tensorflow/lite/micro/kernels/expand_dims.o
+Compiling .pioenvs/wake-word-test3/components/esp-tflite-micro/tensorflow/lite/micro/kernels/fill.o
+Compiling .pioenvs/wake-word-test3/components/esp-tflite-micro/tensorflow/lite/micro/kernels/floor.o
+Compiling .pioenvs/wake-word-test3/components/esp-tflite-micro/tensorflow/lite/micro/kernels/floor_div.o
+Compiling .pioenvs/wake-word-test3/components/esp-tflite-micro/tensorflow/lite/micro/kernels/floor_mod.o
+Compiling .pioenvs/wake-word-test3/components/esp-tflite-micro/tensorflow/lite/micro/kernels/fully_connected_common.o
+Compiling .pioenvs/wake-word-test3/components/esp-tflite-micro/tensorflow/lite/micro/kernels/gather.o
+Compiling .pioenvs/wake-word-test3/components/esp-tflite-micro/tensorflow/lite/micro/kernels/gather_nd.o
+Compiling .pioenvs/wake-word-test3/components/esp-tflite-micro/tensorflow/lite/micro/kernels/hard_swish.o
+Compiling .pioenvs/wake-word-test3/components/esp-tflite-micro/tensorflow/lite/micro/kernels/hard_swish_common.o
+Compiling .pioenvs/wake-word-test3/components/esp-tflite-micro/tensorflow/lite/micro/kernels/if.o
+Compiling .pioenvs/wake-word-test3/components/esp-tflite-micro/tensorflow/lite/micro/kernels/kernel_runner.o
+Compiling .pioenvs/wake-word-test3/components/esp-tflite-micro/tensorflow/lite/micro/kernels/kernel_util.o
+Compiling .pioenvs/wake-word-test3/components/esp-tflite-micro/tensorflow/lite/micro/kernels/l2_pool_2d.o
+Compiling .pioenvs/wake-word-test3/components/esp-tflite-micro/tensorflow/lite/micro/kernels/l2norm.o
+Compiling .pioenvs/wake-word-test3/components/esp-tflite-micro/tensorflow/lite/micro/kernels/leaky_relu.o
+Compiling .pioenvs/wake-word-test3/components/esp-tflite-micro/tensorflow/lite/micro/kernels/leaky_relu_common.o
+Compiling .pioenvs/wake-word-test3/components/esp-tflite-micro/tensorflow/lite/micro/kernels/log_softmax.o
+Compiling .pioenvs/wake-word-test3/components/esp-tflite-micro/tensorflow/lite/micro/kernels/logical.o
+Compiling .pioenvs/wake-word-test3/components/esp-tflite-micro/tensorflow/lite/micro/kernels/logical_common.o
+Compiling .pioenvs/wake-word-test3/components/esp-tflite-micro/tensorflow/lite/micro/kernels/logistic.o
+Compiling .pioenvs/wake-word-test3/components/esp-tflite-micro/tensorflow/lite/micro/kernels/logistic_common.o
+Compiling .pioenvs/wake-word-test3/components/esp-tflite-micro/tensorflow/lite/micro/kernels/lstm_eval.o
+Compiling .pioenvs/wake-word-test3/components/esp-tflite-micro/tensorflow/lite/micro/kernels/lstm_eval_common.o
+In file included from components/esp-tflite-micro/tensorflow/lite/micro/kernels/lstm_eval.cc:25:
+components/esp-tflite-micro/tensorflow/lite/kernels/internal/reference/mul.h: In lambda function:
+components/esp-tflite-micro/tensorflow/lite/kernels/internal/reference/mul.h:151:34: warning: declaration of 'const tflite::ArithmeticParams& params' shadows a parameter [-Wshadow]
+          const uint8_t input2_val) {
+                                  ^
+components/esp-tflite-micro/tensorflow/lite/kernels/internal/reference/mul.h:126:56: note: shadowed declaration is here
+ inline void BroadcastMul6DSlow(const ArithmeticParams& params,
+                                ~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~
+components/esp-tflite-micro/tensorflow/lite/kernels/internal/reference/mul.h: In lambda function:
+components/esp-tflite-micro/tensorflow/lite/kernels/internal/reference/mul.h:210:28: warning: declaration of 'const tflite::ArithmeticParams& params' shadows a parameter [-Wshadow]
+          const T input2_val) {
+                            ^
+components/esp-tflite-micro/tensorflow/lite/kernels/internal/reference/mul.h:171:44: note: shadowed declaration is here
+ BroadcastMul6DSlow(const ArithmeticParams& params,
+                    ~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~
+components/esp-tflite-micro/tensorflow/lite/kernels/internal/reference/mul.h: In lambda function:
+components/esp-tflite-micro/tensorflow/lite/kernels/internal/reference/mul.h:250:46: warning: declaration of 'const tflite::ArithmeticParams& params' shadows a parameter [-Wshadow]
+          const std::complex<float> input2_val) {
+                                              ^
+components/esp-tflite-micro/tensorflow/lite/kernels/internal/reference/mul.h:221:56: note: shadowed declaration is here
+ inline void BroadcastMul6DSlow(const ArithmeticParams& params,
+                                ~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~
+Compiling .pioenvs/wake-word-test3/components/esp-tflite-micro/tensorflow/lite/micro/kernels/maximum_minimum.o
+Compiling .pioenvs/wake-word-test3/components/esp-tflite-micro/tensorflow/lite/micro/kernels/micro_tensor_utils.o
+Compiling .pioenvs/wake-word-test3/components/esp-tflite-micro/tensorflow/lite/micro/kernels/mirror_pad.o
+Compiling .pioenvs/wake-word-test3/components/esp-tflite-micro/tensorflow/lite/micro/kernels/mul_common.o
+In file included from components/esp-tflite-micro/tensorflow/lite/micro/kernels/mul_common.cc:19:
+components/esp-tflite-micro/tensorflow/lite/kernels/internal/reference/mul.h: In lambda function:
+components/esp-tflite-micro/tensorflow/lite/kernels/internal/reference/mul.h:151:34: warning: declaration of 'const tflite::ArithmeticParams& params' shadows a parameter [-Wshadow]
+          const uint8_t input2_val) {
+                                  ^
+components/esp-tflite-micro/tensorflow/lite/kernels/internal/reference/mul.h:126:56: note: shadowed declaration is here
+ inline void BroadcastMul6DSlow(const ArithmeticParams& params,
+                                ~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~
+components/esp-tflite-micro/tensorflow/lite/kernels/internal/reference/mul.h: In lambda function:
+components/esp-tflite-micro/tensorflow/lite/kernels/internal/reference/mul.h:210:28: warning: declaration of 'const tflite::ArithmeticParams& params' shadows a parameter [-Wshadow]
+          const T input2_val) {
+                            ^
+components/esp-tflite-micro/tensorflow/lite/kernels/internal/reference/mul.h:171:44: note: shadowed declaration is here
+ BroadcastMul6DSlow(const ArithmeticParams& params,
+                    ~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~
+components/esp-tflite-micro/tensorflow/lite/kernels/internal/reference/mul.h: In lambda function:
+components/esp-tflite-micro/tensorflow/lite/kernels/internal/reference/mul.h:250:46: warning: declaration of 'const tflite::ArithmeticParams& params' shadows a parameter [-Wshadow]
+          const std::complex<float> input2_val) {
+                                              ^
+components/esp-tflite-micro/tensorflow/lite/kernels/internal/reference/mul.h:221:56: note: shadowed declaration is here
+ inline void BroadcastMul6DSlow(const ArithmeticParams& params,
+                                ~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~
+Compiling .pioenvs/wake-word-test3/components/esp-tflite-micro/tensorflow/lite/micro/kernels/neg.o
+components/esp-tflite-micro/tensorflow/lite/kernels/internal/reference/mul.h: In instantiation of 'typename std::enable_if<((! tflite::is_small_integer<T>::value) || enable_for_short_integers), void>::type tflite::reference_ops::BroadcastMul6DSlow(const tflite::ArithmeticParams&, const tflite::RuntimeShape&, const T*, const tflite::RuntimeShape&, const T*, const tflite::RuntimeShape&, T*) [with T = int; bool enable_for_short_integers = false; typename std::enable_if<((! tflite::is_small_integer<T>::value) || enable_for_short_integers), void>::type = void]':
+components/esp-tflite-micro/tensorflow/lite/kernels/internal/reference/mul.h:260:28:   required from 'void tflite::reference_ops::BroadcastMul4DSlow(const tflite::ArithmeticParams&, const tflite::RuntimeShape&, const T*, const tflite::RuntimeShape&, const T*, const tflite::RuntimeShape&, T*) [with T = int]'
+components/esp-tflite-micro/tensorflow/lite/micro/kernels/mul_common.cc:147:56:   required from here
+components/esp-tflite-micro/tensorflow/lite/kernels/internal/reference/mul.h:206:34: warning: declaration of 'const tflite::ArithmeticParams& params' shadows a parameter [-Wshadow]
+   BroadcastMulRecursiveDimensions(
+   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+       params, 0, input1_data, input2_data, output_data, &input1_offset,
+       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+       &input2_offset, &output_offset, desc1, desc2, extended_output_shape_dims,
+       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+       [](const ArithmeticParams& params, const T input1_val,
+       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+          const T input2_val) {
+          ~~~~~~~~~~~~~~~~~~~~~    
+         T output_activation_min;
+         ~~~~~~~~~~~~~~~~~~~~~~~~  
+         T output_activation_max;
+         ~~~~~~~~~~~~~~~~~~~~~~~~  
+         GetActivationParams(params, &output_activation_min,
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                             &output_activation_max);
+                             ~~~~~~~~~~~~~~~~~~~~~~~~
+         return ActivationFunctionWithMinMax<T>(input1_val * input2_val,
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                                                output_activation_min,
+                                                ~~~~~~~~~~~~~~~~~~~~~~
+                                                output_activation_max);
+                                                ~~~~~~~~~~~~~~~~~~~~~~~
+       });
+       ~~                          
+components/esp-tflite-micro/tensorflow/lite/kernels/internal/reference/mul.h:171:44: note: shadowed declaration is here
+ BroadcastMul6DSlow(const ArithmeticParams& params,
+                    ~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~
+components/esp-tflite-micro/tensorflow/lite/kernels/internal/reference/mul.h: In instantiation of 'typename std::enable_if<((! tflite::is_small_integer<T>::value) || enable_for_short_integers), void>::type tflite::reference_ops::BroadcastMul6DSlow(const tflite::ArithmeticParams&, const tflite::RuntimeShape&, const T*, const tflite::RuntimeShape&, const T*, const tflite::RuntimeShape&, T*) [with T = float; bool enable_for_short_integers = false; typename std::enable_if<((! tflite::is_small_integer<T>::value) || enable_for_short_integers), void>::type = void]':
+components/esp-tflite-micro/tensorflow/lite/kernels/internal/reference/mul.h:260:28:   required from 'void tflite::reference_ops::BroadcastMul4DSlow(const tflite::ArithmeticParams&, const tflite::RuntimeShape&, const T*, const tflite::RuntimeShape&, const T*, const tflite::RuntimeShape&, T*) [with T = float]'
+components/esp-tflite-micro/tensorflow/lite/micro/kernels/mul_common.cc:202:52:   required from here
+components/esp-tflite-micro/tensorflow/lite/kernels/internal/reference/mul.h:206:34: warning: declaration of 'const tflite::ArithmeticParams& params' shadows a parameter [-Wshadow]
+   BroadcastMulRecursiveDimensions(
+   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+       params, 0, input1_data, input2_data, output_data, &input1_offset,
+       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+       &input2_offset, &output_offset, desc1, desc2, extended_output_shape_dims,
+       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+       [](const ArithmeticParams& params, const T input1_val,
+       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+          const T input2_val) {
+          ~~~~~~~~~~~~~~~~~~~~~    
+         T output_activation_min;
+         ~~~~~~~~~~~~~~~~~~~~~~~~  
+         T output_activation_max;
+         ~~~~~~~~~~~~~~~~~~~~~~~~  
+         GetActivationParams(params, &output_activation_min,
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                             &output_activation_max);
+                             ~~~~~~~~~~~~~~~~~~~~~~~~
+         return ActivationFunctionWithMinMax<T>(input1_val * input2_val,
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                                                output_activation_min,
+                                                ~~~~~~~~~~~~~~~~~~~~~~
+                                                output_activation_max);
+                                                ~~~~~~~~~~~~~~~~~~~~~~~
+       });
+       ~~                          
+components/esp-tflite-micro/tensorflow/lite/kernels/internal/reference/mul.h:171:44: note: shadowed declaration is here
+ BroadcastMul6DSlow(const ArithmeticParams& params,
+                    ~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~
+Compiling .pioenvs/wake-word-test3/components/esp-tflite-micro/tensorflow/lite/micro/kernels/pack.o
+Compiling .pioenvs/wake-word-test3/components/esp-tflite-micro/tensorflow/lite/micro/kernels/pad.o
+Compiling .pioenvs/wake-word-test3/components/esp-tflite-micro/tensorflow/lite/micro/kernels/pooling_common.o
+Compiling .pioenvs/wake-word-test3/components/esp-tflite-micro/tensorflow/lite/micro/kernels/prelu.o
+Compiling .pioenvs/wake-word-test3/components/esp-tflite-micro/tensorflow/lite/micro/kernels/prelu_common.o
+Compiling .pioenvs/wake-word-test3/components/esp-tflite-micro/tensorflow/lite/micro/kernels/quantize.o
+Compiling .pioenvs/wake-word-test3/components/esp-tflite-micro/tensorflow/lite/micro/kernels/quantize_common.o
+Compiling .pioenvs/wake-word-test3/components/esp-tflite-micro/tensorflow/lite/micro/kernels/read_variable.o
+Compiling .pioenvs/wake-word-test3/components/esp-tflite-micro/tensorflow/lite/micro/kernels/reduce.o
+Compiling .pioenvs/wake-word-test3/components/esp-tflite-micro/tensorflow/lite/micro/kernels/reduce_common.o
+Compiling .pioenvs/wake-word-test3/components/esp-tflite-micro/tensorflow/lite/micro/kernels/reshape.o
+Compiling .pioenvs/wake-word-test3/components/esp-tflite-micro/tensorflow/lite/micro/kernels/reshape_common.o
+Compiling .pioenvs/wake-word-test3/components/esp-tflite-micro/tensorflow/lite/micro/kernels/resize_bilinear.o
+Compiling .pioenvs/wake-word-test3/components/esp-tflite-micro/tensorflow/lite/micro/kernels/resize_nearest_neighbor.o
+Compiling .pioenvs/wake-word-test3/components/esp-tflite-micro/tensorflow/lite/micro/kernels/round.o
+Compiling .pioenvs/wake-word-test3/components/esp-tflite-micro/tensorflow/lite/micro/kernels/select.o
+Compiling .pioenvs/wake-word-test3/components/esp-tflite-micro/tensorflow/lite/micro/kernels/shape.o
+Compiling .pioenvs/wake-word-test3/components/esp-tflite-micro/tensorflow/lite/micro/kernels/slice.o
+Compiling .pioenvs/wake-word-test3/components/esp-tflite-micro/tensorflow/lite/micro/kernels/softmax_common.o
+Compiling .pioenvs/wake-word-test3/components/esp-tflite-micro/tensorflow/lite/micro/kernels/space_to_batch_nd.o
+Compiling .pioenvs/wake-word-test3/components/esp-tflite-micro/tensorflow/lite/micro/kernels/space_to_depth.o
+Compiling .pioenvs/wake-word-test3/components/esp-tflite-micro/tensorflow/lite/micro/kernels/split.o
+Compiling .pioenvs/wake-word-test3/components/esp-tflite-micro/tensorflow/lite/micro/kernels/split_v.o
+Compiling .pioenvs/wake-word-test3/components/esp-tflite-micro/tensorflow/lite/micro/kernels/squared_difference.o
+Compiling .pioenvs/wake-word-test3/components/esp-tflite-micro/tensorflow/lite/micro/kernels/squeeze.o
+Compiling .pioenvs/wake-word-test3/components/esp-tflite-micro/tensorflow/lite/micro/kernels/strided_slice.o
+Compiling .pioenvs/wake-word-test3/components/esp-tflite-micro/tensorflow/lite/micro/kernels/strided_slice_common.o
+Compiling .pioenvs/wake-word-test3/components/esp-tflite-micro/tensorflow/lite/micro/kernels/sub.o
+In file included from components/esp-tflite-micro/tensorflow/lite/micro/kernels/sub.cc:24:
+components/esp-tflite-micro/tensorflow/lite/kernels/internal/reference/sub.h: In lambda function:
+components/esp-tflite-micro/tensorflow/lite/kernels/internal/reference/sub.h:264:68: warning: declaration of 'const tflite::ArithmeticParams& params' shadows a parameter [-Wshadow]
+       [](T input1_val, T input2_val, const ArithmeticParams& params) {
+                                                                    ^
+components/esp-tflite-micro/tensorflow/lite/kernels/internal/reference/sub.h:256:47: note: shadowed declaration is here
+ void BroadcastSubSlow(const ArithmeticParams& params,
+                       ~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~
+components/esp-tflite-micro/tensorflow/lite/kernels/internal/reference/sub.h: In lambda function:
+components/esp-tflite-micro/tensorflow/lite/kernels/internal/reference/sub.h:284:40: warning: declaration of 'const tflite::ArithmeticParams& params' shadows a parameter [-Wshadow]
+          const ArithmeticParams& params) {
+                                        ^
+components/esp-tflite-micro/tensorflow/lite/kernels/internal/reference/sub.h:272:59: note: shadowed declaration is here
+ inline void BroadcastSub16POTSlow(const ArithmeticParams& params,
+                                   ~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~
+components/esp-tflite-micro/tensorflow/lite/kernels/internal/reference/sub.h: In lambda function:
+components/esp-tflite-micro/tensorflow/lite/kernels/internal/reference/sub.h:308:68: warning: declaration of 'const tflite::ArithmeticParams& params' shadows a parameter [-Wshadow]
+       [](T input1_val, T input2_val, const ArithmeticParams& params) {
+                                                                    ^
+components/esp-tflite-micro/tensorflow/lite/kernels/internal/reference/sub.h:298:52: note: shadowed declaration is here
+ void BroadcastQuantSubSlow(const ArithmeticParams& params,
+                            ~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~
+components/esp-tflite-micro/tensorflow/lite/kernels/internal/reference/sub.h: In lambda function:
+components/esp-tflite-micro/tensorflow/lite/kernels/internal/reference/sub.h:420:68: warning: declaration of 'const tflite::ArithmeticParams& params' shadows a parameter [-Wshadow]
+       [](T input1_val, T input2_val, const ArithmeticParams& params) {
+                                                                    ^
+components/esp-tflite-micro/tensorflow/lite/kernels/internal/reference/sub.h:413:34: note: shadowed declaration is here
+ void Sub(const ArithmeticParams& params, const RuntimeShape& input1_shape,
+          ~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~
+Compiling .pioenvs/wake-word-test3/components/esp-tflite-micro/tensorflow/lite/micro/kernels/sub_common.o
+In file included from components/esp-tflite-micro/tensorflow/lite/micro/kernels/sub_common.cc:22:
+components/esp-tflite-micro/tensorflow/lite/kernels/internal/reference/sub.h: In lambda function:
+components/esp-tflite-micro/tensorflow/lite/kernels/internal/reference/sub.h:264:68: warning: declaration of 'const tflite::ArithmeticParams& params' shadows a parameter [-Wshadow]
+       [](T input1_val, T input2_val, const ArithmeticParams& params) {
+                                                                    ^
+components/esp-tflite-micro/tensorflow/lite/kernels/internal/reference/sub.h:256:47: note: shadowed declaration is here
+ void BroadcastSubSlow(const ArithmeticParams& params,
+                       ~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~
+components/esp-tflite-micro/tensorflow/lite/kernels/internal/reference/sub.h: In lambda function:
+components/esp-tflite-micro/tensorflow/lite/kernels/internal/reference/sub.h:284:40: warning: declaration of 'const tflite::ArithmeticParams& params' shadows a parameter [-Wshadow]
+          const ArithmeticParams& params) {
+                                        ^
+components/esp-tflite-micro/tensorflow/lite/kernels/internal/reference/sub.h:272:59: note: shadowed declaration is here
+ inline void BroadcastSub16POTSlow(const ArithmeticParams& params,
+                                   ~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~
+components/esp-tflite-micro/tensorflow/lite/kernels/internal/reference/sub.h: In lambda function:
+components/esp-tflite-micro/tensorflow/lite/kernels/internal/reference/sub.h:308:68: warning: declaration of 'const tflite::ArithmeticParams& params' shadows a parameter [-Wshadow]
+       [](T input1_val, T input2_val, const ArithmeticParams& params) {
+                                                                    ^
+components/esp-tflite-micro/tensorflow/lite/kernels/internal/reference/sub.h:298:52: note: shadowed declaration is here
+ void BroadcastQuantSubSlow(const ArithmeticParams& params,
+                            ~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~
+components/esp-tflite-micro/tensorflow/lite/kernels/internal/reference/sub.h: In lambda function:
+components/esp-tflite-micro/tensorflow/lite/kernels/internal/reference/sub.h:420:68: warning: declaration of 'const tflite::ArithmeticParams& params' shadows a parameter [-Wshadow]
+       [](T input1_val, T input2_val, const ArithmeticParams& params) {
+                                                                    ^
+components/esp-tflite-micro/tensorflow/lite/kernels/internal/reference/sub.h:413:34: note: shadowed declaration is here
+ void Sub(const ArithmeticParams& params, const RuntimeShape& input1_shape,
+          ~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~
+components/esp-tflite-micro/tensorflow/lite/kernels/internal/reference/sub.h: In instantiation of 'void tflite::reference_ops::BroadcastSubSlow(const tflite::ArithmeticParams&, const tflite::RuntimeShape&, const T*, const tflite::RuntimeShape&, const T*, const tflite::RuntimeShape&, T*) [with T = float]':
+components/esp-tflite-micro/tensorflow/lite/micro/kernels/sub.cc:54:52:   required from here
+components/esp-tflite-micro/tensorflow/lite/kernels/internal/reference/sub.h:261:24: warning: declaration of 'const tflite::ArithmeticParams& params' shadows a parameter [-Wshadow]
+   BroadcastSubCommon<T>(
+   ~~~~~~~~~~~~~~~~~~~~~^
+       params, input1_shape, input1_data, input2_shape, input2_data,
+       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+       output_shape, output_data,
+       ~~~~~~~~~~~~~~~~~~~~~~~~~~
+       [](T input1_val, T input2_val, const ArithmeticParams& params) {
+       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+         T activation_min, activation_max;
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+         GetActivationParams(params, &activation_min, &activation_max);
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+         return ActivationFunctionWithMinMax(input1_val - input2_val,
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                                             activation_min, activation_max);
+                                             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+       });
+       ~~                
+components/esp-tflite-micro/tensorflow/lite/kernels/internal/reference/sub.h:256:47: note: shadowed declaration is here
+ void BroadcastSubSlow(const ArithmeticParams& params,
+                       ~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~
+components/esp-tflite-micro/tensorflow/lite/kernels/internal/reference/sub.h: In instantiation of 'void tflite::reference_ops::BroadcastQuantSubSlow(const tflite::ArithmeticParams&, const tflite::RuntimeShape&, const T*, const tflite::RuntimeShape&, const T*, const tflite::RuntimeShape&, T*) [with T = signed char]':
+components/esp-tflite-micro/tensorflow/lite/micro/kernels/sub.cc:97:57:   required from here
+components/esp-tflite-micro/tensorflow/lite/kernels/internal/reference/sub.h:305:24: warning: declaration of 'const tflite::ArithmeticParams& params' shadows a parameter [-Wshadow]
+   BroadcastSubCommon<T>(
+   ~~~~~~~~~~~~~~~~~~~~~^
+       params, input1_shape, input1_data, input2_shape, input2_data,
+       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+       output_shape, output_data,
+       ~~~~~~~~~~~~~~~~~~~~~~~~~~
+       [](T input1_val, T input2_val, const ArithmeticParams& params) {
+       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+         const int32_t shifted_input1_val =
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+             (params.input1_offset + input1_val) * (1 << params.left_shift);
+             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+         const int32_t shifted_input2_val =
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+             (params.input2_offset + input2_val) * (1 << params.left_shift);
+             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+         const int32_t scaled_input1_val =
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+             MultiplyByQuantizedMultiplierSmallerThanOneExp(
+             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                 shifted_input1_val, params.input1_multiplier,
+                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                 params.input1_shift);
+                 ~~~~~~~~~~~~~~~~~~~~~
+         const int32_t scaled_input2_val =
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+             MultiplyByQuantizedMultiplierSmallerThanOneExp(
+             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                 shifted_input2_val, params.input2_multiplier,
+                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                 params.input2_shift);
+                 ~~~~~~~~~~~~~~~~~~~~~
+         const int32_t raw_sub = scaled_input1_val - scaled_input2_val;
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+         const int32_t raw_output =
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~
+             MultiplyByQuantizedMultiplierSmallerThanOneExp(
+             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                 raw_sub, params.output_multiplier, params.output_shift) +
+                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+             params.output_offset;
+             ~~~~~~~~~~~~~~~~~~~~~
+         const int32_t clamped_output =
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+             std::min(params.quantized_activation_max,
+             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                      std::max(params.quantized_activation_min, raw_output));
+                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+         return static_cast<T>(clamped_output);
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+       });
+       ~~                
+components/esp-tflite-micro/tensorflow/lite/kernels/internal/reference/sub.h:298:52: note: shadowed declaration is here
+ void BroadcastQuantSubSlow(const ArithmeticParams& params,
+                            ~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~
+components/esp-tflite-micro/tensorflow/lite/kernels/internal/reference/sub.h: In instantiation of 'void tflite::reference_ops::BroadcastQuantSubSlow(const tflite::ArithmeticParams&, const tflite::RuntimeShape&, const T*, const tflite::RuntimeShape&, const T*, const tflite::RuntimeShape&, T*) [with T = short int]':
+components/esp-tflite-micro/tensorflow/lite/micro/kernels/sub.cc:117:58:   required from here
+components/esp-tflite-micro/tensorflow/lite/kernels/internal/reference/sub.h:305:24: warning: declaration of 'const tflite::ArithmeticParams& params' shadows a parameter [-Wshadow]
+   BroadcastSubCommon<T>(
+   ~~~~~~~~~~~~~~~~~~~~~^
+       params, input1_shape, input1_data, input2_shape, input2_data,
+       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+       output_shape, output_data,
+       ~~~~~~~~~~~~~~~~~~~~~~~~~~
+       [](T input1_val, T input2_val, const ArithmeticParams& params) {
+       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+         const int32_t shifted_input1_val =
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+             (params.input1_offset + input1_val) * (1 << params.left_shift);
+             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+         const int32_t shifted_input2_val =
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+             (params.input2_offset + input2_val) * (1 << params.left_shift);
+             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+         const int32_t scaled_input1_val =
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+             MultiplyByQuantizedMultiplierSmallerThanOneExp(
+             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                 shifted_input1_val, params.input1_multiplier,
+                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                 params.input1_shift);
+                 ~~~~~~~~~~~~~~~~~~~~~
+         const int32_t scaled_input2_val =
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+             MultiplyByQuantizedMultiplierSmallerThanOneExp(
+             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                 shifted_input2_val, params.input2_multiplier,
+                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                 params.input2_shift);
+                 ~~~~~~~~~~~~~~~~~~~~~
+         const int32_t raw_sub = scaled_input1_val - scaled_input2_val;
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+         const int32_t raw_output =
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~
+             MultiplyByQuantizedMultiplierSmallerThanOneExp(
+             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                 raw_sub, params.output_multiplier, params.output_shift) +
+                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+             params.output_offset;
+             ~~~~~~~~~~~~~~~~~~~~~
+         const int32_t clamped_output =
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+             std::min(params.quantized_activation_max,
+             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                      std::max(params.quantized_activation_min, raw_output));
+                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+         return static_cast<T>(clamped_output);
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+       });
+       ~~                
+components/esp-tflite-micro/tensorflow/lite/kernels/internal/reference/sub.h:298:52: note: shadowed declaration is here
+ void BroadcastQuantSubSlow(const ArithmeticParams& params,
+                            ~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~
+Compiling .pioenvs/wake-word-test3/components/esp-tflite-micro/tensorflow/lite/micro/kernels/svdf.o
+Compiling .pioenvs/wake-word-test3/components/esp-tflite-micro/tensorflow/lite/micro/kernels/svdf_common.o
+Compiling .pioenvs/wake-word-test3/components/esp-tflite-micro/tensorflow/lite/micro/kernels/tanh.o
+Compiling .pioenvs/wake-word-test3/components/esp-tflite-micro/tensorflow/lite/micro/kernels/transpose.o
+Compiling .pioenvs/wake-word-test3/components/esp-tflite-micro/tensorflow/lite/micro/kernels/transpose_conv.o
+Compiling .pioenvs/wake-word-test3/components/esp-tflite-micro/tensorflow/lite/micro/kernels/unidirectional_sequence_lstm.o
+Compiling .pioenvs/wake-word-test3/components/esp-tflite-micro/tensorflow/lite/micro/kernels/unpack.o
+Compiling .pioenvs/wake-word-test3/components/esp-tflite-micro/tensorflow/lite/micro/kernels/var_handle.o
+Compiling .pioenvs/wake-word-test3/components/esp-tflite-micro/tensorflow/lite/micro/kernels/while.o
+Compiling .pioenvs/wake-word-test3/components/esp-tflite-micro/tensorflow/lite/micro/kernels/zeros_like.o
+Compiling .pioenvs/wake-word-test3/components/esp-tflite-micro/tensorflow/lite/micro/tflite_bridge/flatbuffer_conversions_bridge.o
+Compiling .pioenvs/wake-word-test3/components/esp-tflite-micro/tensorflow/lite/micro/tflite_bridge/micro_error_reporter.o
+Compiling .pioenvs/wake-word-test3/components/esp-tflite-micro/tensorflow/lite/micro/kernels/esp_nn/add.o
+Compiling .pioenvs/wake-word-test3/components/esp-tflite-micro/tensorflow/lite/micro/kernels/esp_nn/conv.o
+Compiling .pioenvs/wake-word-test3/components/esp-tflite-micro/tensorflow/lite/micro/kernels/esp_nn/depthwise_conv.o
+Compiling .pioenvs/wake-word-test3/components/esp-tflite-micro/tensorflow/lite/micro/kernels/esp_nn/fully_connected.o
+Compiling .pioenvs/wake-word-test3/components/esp-tflite-micro/tensorflow/lite/micro/kernels/esp_nn/mul.o
+In file included from components/esp-tflite-micro/tensorflow/lite/micro/kernels/esp_nn/mul.cc:21:
+components/esp-tflite-micro/tensorflow/lite/kernels/internal/reference/mul.h: In lambda function:
+components/esp-tflite-micro/tensorflow/lite/kernels/internal/reference/mul.h:151:34: warning: declaration of 'const tflite::ArithmeticParams& params' shadows a parameter [-Wshadow]
+          const uint8_t input2_val) {
+                                  ^
+components/esp-tflite-micro/tensorflow/lite/kernels/internal/reference/mul.h:126:56: note: shadowed declaration is here
+ inline void BroadcastMul6DSlow(const ArithmeticParams& params,
+                                ~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~
+components/esp-tflite-micro/tensorflow/lite/kernels/internal/reference/mul.h: In lambda function:
+components/esp-tflite-micro/tensorflow/lite/kernels/internal/reference/mul.h:210:28: warning: declaration of 'const tflite::ArithmeticParams& params' shadows a parameter [-Wshadow]
+          const T input2_val) {
+                            ^
+components/esp-tflite-micro/tensorflow/lite/kernels/internal/reference/mul.h:171:44: note: shadowed declaration is here
+ BroadcastMul6DSlow(const ArithmeticParams& params,
+                    ~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~
+components/esp-tflite-micro/tensorflow/lite/kernels/internal/reference/mul.h: In lambda function:
+components/esp-tflite-micro/tensorflow/lite/kernels/internal/reference/mul.h:250:46: warning: declaration of 'const tflite::ArithmeticParams& params' shadows a parameter [-Wshadow]
+          const std::complex<float> input2_val) {
+                                              ^
+components/esp-tflite-micro/tensorflow/lite/kernels/internal/reference/mul.h:221:56: note: shadowed declaration is here
+ inline void BroadcastMul6DSlow(const ArithmeticParams& params,
+                                ~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~
+Compiling .pioenvs/wake-word-test3/components/esp-tflite-micro/tensorflow/lite/micro/kernels/esp_nn/pooling.o
+Compiling .pioenvs/wake-word-test3/components/esp-tflite-micro/tensorflow/lite/micro/kernels/esp_nn/softmax.o
+Compiling .pioenvs/wake-word-test3/components/esp-tflite-micro/signal/micro/kernels/delay.o
+Compiling .pioenvs/wake-word-test3/components/esp-tflite-micro/signal/micro/kernels/energy.o
+Compiling .pioenvs/wake-word-test3/components/esp-tflite-micro/signal/micro/kernels/fft_auto_scale_common.o
+Compiling .pioenvs/wake-word-test3/components/esp-tflite-micro/signal/micro/kernels/fft_auto_scale_kernel.o
+Compiling .pioenvs/wake-word-test3/components/esp-tflite-micro/signal/micro/kernels/filter_bank.o
+Compiling .pioenvs/wake-word-test3/components/esp-tflite-micro/signal/micro/kernels/filter_bank_log.o
+Compiling .pioenvs/wake-word-test3/components/esp-tflite-micro/signal/micro/kernels/filter_bank_spectral_subtraction.o
+Compiling .pioenvs/wake-word-test3/components/esp-tflite-micro/signal/micro/kernels/filter_bank_square_root.o
+Compiling .pioenvs/wake-word-test3/components/esp-tflite-micro/signal/micro/kernels/filter_bank_square_root_common.o
+Compiling .pioenvs/wake-word-test3/components/esp-tflite-micro/signal/micro/kernels/framer.o
+Compiling .pioenvs/wake-word-test3/components/esp-tflite-micro/signal/micro/kernels/irfft.o
+Compiling .pioenvs/wake-word-test3/components/esp-tflite-micro/signal/micro/kernels/overlap_add.o
+Compiling .pioenvs/wake-word-test3/components/esp-tflite-micro/signal/micro/kernels/pcan.o
+Compiling .pioenvs/wake-word-test3/components/esp-tflite-micro/signal/micro/kernels/rfft.o
+Compiling .pioenvs/wake-word-test3/components/esp-tflite-micro/signal/micro/kernels/stacker.o
+Compiling .pioenvs/wake-word-test3/components/esp-tflite-micro/signal/micro/kernels/window.o
+Compiling .pioenvs/wake-word-test3/components/esp-tflite-micro/signal/src/circular_buffer.o
+Compiling .pioenvs/wake-word-test3/components/esp-tflite-micro/signal/src/energy.o
+Compiling .pioenvs/wake-word-test3/components/esp-tflite-micro/signal/src/fft_auto_scale.o
+Compiling .pioenvs/wake-word-test3/components/esp-tflite-micro/signal/src/filter_bank.o
+Compiling .pioenvs/wake-word-test3/components/esp-tflite-micro/signal/src/filter_bank_log.o
+Compiling .pioenvs/wake-word-test3/components/esp-tflite-micro/signal/src/filter_bank_spectral_subtraction.o
+Compiling .pioenvs/wake-word-test3/components/esp-tflite-micro/signal/src/filter_bank_square_root.o
+Compiling .pioenvs/wake-word-test3/components/esp-tflite-micro/signal/src/irfft_float.o
+Compiling .pioenvs/wake-word-test3/components/esp-tflite-micro/signal/src/irfft_int16.o
+Compiling .pioenvs/wake-word-test3/components/esp-tflite-micro/signal/src/irfft_int32.o
+Compiling .pioenvs/wake-word-test3/components/esp-tflite-micro/signal/src/log.o
+Compiling .pioenvs/wake-word-test3/components/esp-tflite-micro/signal/src/max_abs.o
+Compiling .pioenvs/wake-word-test3/components/esp-tflite-micro/signal/src/msb_32.o
+Compiling .pioenvs/wake-word-test3/components/esp-tflite-micro/signal/src/msb_64.o
+Compiling .pioenvs/wake-word-test3/components/esp-tflite-micro/signal/src/overlap_add.o
+Compiling .pioenvs/wake-word-test3/components/esp-tflite-micro/signal/src/pcan_argc_fixed.o
+Compiling .pioenvs/wake-word-test3/components/esp-tflite-micro/signal/src/rfft_float.o
+Compiling .pioenvs/wake-word-test3/components/esp-tflite-micro/signal/src/rfft_int16.o
+Compiling .pioenvs/wake-word-test3/components/esp-tflite-micro/signal/src/rfft_int32.o
+Compiling .pioenvs/wake-word-test3/components/esp-tflite-micro/signal/src/square_root_32.o
+Compiling .pioenvs/wake-word-test3/components/esp-tflite-micro/signal/src/square_root_64.o
+Compiling .pioenvs/wake-word-test3/components/esp-tflite-micro/signal/src/window.o
+Compiling .pioenvs/wake-word-test3/components/esp-tflite-micro/signal/src/kiss_fft_wrappers/kiss_fft_float.o
+Compiling .pioenvs/wake-word-test3/components/esp-tflite-micro/signal/src/kiss_fft_wrappers/kiss_fft_int16.o
+Compiling .pioenvs/wake-word-test3/components/esp-tflite-micro/signal/src/kiss_fft_wrappers/kiss_fft_int32.o
+Compiling .pioenvs/wake-word-test3/components/esp-tflite-micro/tensorflow/lite/kernels/kernel_util.o
+Compiling .pioenvs/wake-word-test3/components/esp-tflite-micro/tensorflow/lite/micro/memory_planner/greedy_memory_planner.o
+Compiling .pioenvs/wake-word-test3/components/esp-tflite-micro/tensorflow/lite/micro/memory_planner/linear_memory_planner.o
+Compiling .pioenvs/wake-word-test3/components/esp-tflite-micro/tensorflow/lite/micro/arena_allocator/non_persistent_arena_buffer_allocator.o
+Compiling .pioenvs/wake-word-test3/components/esp-tflite-micro/tensorflow/lite/micro/arena_allocator/persistent_arena_buffer_allocator.o
+Compiling .pioenvs/wake-word-test3/components/esp-tflite-micro/tensorflow/lite/micro/arena_allocator/recording_single_arena_buffer_allocator.o
+Compiling .pioenvs/wake-word-test3/components/esp-tflite-micro/tensorflow/lite/micro/arena_allocator/single_arena_buffer_allocator.o
+Compiling .pioenvs/wake-word-test3/components/esp-tflite-micro/tensorflow/lite/core/c/common.o
+Compiling .pioenvs/wake-word-test3/components/esp-tflite-micro/tensorflow/lite/core/api/error_reporter.o
+Compiling .pioenvs/wake-word-test3/components/esp-tflite-micro/tensorflow/lite/core/api/flatbuffer_conversions.o
+Compiling .pioenvs/wake-word-test3/components/esp-tflite-micro/tensorflow/lite/core/api/tensor_utils.o
+Compiling .pioenvs/wake-word-test3/components/esp-tflite-micro/tensorflow/lite/kernels/internal/common.o
+Compiling .pioenvs/wake-word-test3/components/esp-tflite-micro/tensorflow/lite/kernels/internal/quantization_util.o
+Compiling .pioenvs/wake-word-test3/components/esp-tflite-micro/tensorflow/lite/kernels/internal/portable_tensor_utils.o
+Compiling .pioenvs/wake-word-test3/components/esp-tflite-micro/tensorflow/lite/kernels/internal/tensor_utils.o
+Compiling .pioenvs/wake-word-test3/components/esp-tflite-micro/tensorflow/lite/kernels/internal/tensor_ctypes.o
+Compiling .pioenvs/wake-word-test3/components/esp-tflite-micro/tensorflow/lite/kernels/internal/reference/portable_tensor_utils.o
+Compiling .pioenvs/wake-word-test3/components/esp-tflite-micro/tensorflow/lite/kernels/internal/reference/comparisons.o
+Compiling .pioenvs/wake-word-test3/components/esp-tflite-micro/tensorflow/lite/schema/schema_utils.o
+Compiling .pioenvs/wake-word-test3/esp-tls/esp_tls.o
+Compiling .pioenvs/wake-word-test3/esp-tls/esp-tls-crypto/esp_tls_crypto.o
+Compiling .pioenvs/wake-word-test3/esp-tls/esp_tls_error_capture.o
+Compiling .pioenvs/wake-word-test3/esp-tls/esp_tls_mbedtls.o
+Archiving .pioenvs/wake-word-test3/esp-idf/esp-tls/libesp-tls.a
+Compiling .pioenvs/wake-word-test3/esp_adc_cal/esp_adc_cal_common.o
+Compiling .pioenvs/wake-word-test3/esp_adc_cal/esp32s3/esp_adc_cal.o
+Archiving .pioenvs/wake-word-test3/esp-idf/esp_adc_cal/libesp_adc_cal.a
+Compiling .pioenvs/wake-word-test3/esp_common/src/esp_err_to_name.o
+Archiving .pioenvs/wake-word-test3/esp-idf/esp_common/libesp_common.a
+Compiling .pioenvs/wake-word-test3/esp_eth/src/esp_eth.o
+Compiling .pioenvs/wake-word-test3/esp_eth/src/esp_eth_phy.o
+Compiling .pioenvs/wake-word-test3/esp_eth/src/esp_eth_netif_glue.o
+Archiving .pioenvs/wake-word-test3/esp-idf/esp_eth/libesp_eth.a
+Compiling .pioenvs/wake-word-test3/esp_event/default_event_loop.o
+Compiling .pioenvs/wake-word-test3/esp_event/esp_event.o
+Compiling .pioenvs/wake-word-test3/esp_event/esp_event_private.o
+Compiling .pioenvs/wake-word-test3/esp_event/event_loop_legacy.o
+Compiling .pioenvs/wake-word-test3/esp_event/event_send.o
+Archiving .pioenvs/wake-word-test3/esp-idf/esp_event/libesp_event.a
+Compiling .pioenvs/wake-word-test3/esp_gdbstub/src/gdbstub.o
+Compiling .pioenvs/wake-word-test3/esp_gdbstub/src/packet.o
+Compiling .pioenvs/wake-word-test3/esp_gdbstub/xtensa/gdbstub_xtensa.o
+Compiling .pioenvs/wake-word-test3/esp_gdbstub/xtensa/gdbstub-entry.o
+Compiling .pioenvs/wake-word-test3/esp_gdbstub/esp_common/gdbstub_common.o
+Archiving .pioenvs/wake-word-test3/esp-idf/esp_gdbstub/libesp_gdbstub.a
+Compiling .pioenvs/wake-word-test3/esp_hid/src/esp_hidd.o
+Compiling .pioenvs/wake-word-test3/esp_hid/src/esp_hidh.o
+Compiling .pioenvs/wake-word-test3/esp_hid/src/esp_hid_common.o
+Archiving .pioenvs/wake-word-test3/esp-idf/esp_hid/libesp_hid.a
+Compiling .pioenvs/wake-word-test3/esp_http_client/esp_http_client.o
+Compiling .pioenvs/wake-word-test3/esp_http_client/lib/http_auth.o
+Compiling .pioenvs/wake-word-test3/esp_http_client/lib/http_header.o
+Compiling .pioenvs/wake-word-test3/esp_http_client/lib/http_utils.o
+Archiving .pioenvs/wake-word-test3/esp-idf/esp_http_client/libesp_http_client.a
+Compiling .pioenvs/wake-word-test3/esp_http_server/src/httpd_main.o
+Compiling .pioenvs/wake-word-test3/esp_http_server/src/httpd_parse.o
+Compiling .pioenvs/wake-word-test3/esp_http_server/src/httpd_sess.o
+Compiling .pioenvs/wake-word-test3/esp_http_server/src/httpd_txrx.o
+Archiving .pioenvs/wake-word-test3/esp-idf/esp-tflite-micro/libesp-tflite-micro.a
+Compiling .pioenvs/wake-word-test3/esp_http_server/src/httpd_uri.o
+Compiling .pioenvs/wake-word-test3/esp_http_server/src/httpd_ws.o
+Compiling .pioenvs/wake-word-test3/esp_http_server/src/util/ctrl_sock.o
+Compiling .pioenvs/wake-word-test3/esp_https_ota/src/esp_https_ota.o
+Archiving .pioenvs/wake-word-test3/esp-idf/esp_http_server/libesp_http_server.a
+Compiling .pioenvs/wake-word-test3/esp_hw_support/compare_set.o
+Compiling .pioenvs/wake-word-test3/esp_hw_support/cpu_util.o
+Compiling .pioenvs/wake-word-test3/esp_hw_support/esp_async_memcpy.o
+Archiving .pioenvs/wake-word-test3/esp-idf/esp_https_ota/libesp_https_ota.a
+Compiling .pioenvs/wake-word-test3/esp_hw_support/esp_clk.o
+Compiling .pioenvs/wake-word-test3/esp_hw_support/clk_ctrl_os.o
+Compiling .pioenvs/wake-word-test3/esp_hw_support/hw_random.o
+Compiling .pioenvs/wake-word-test3/esp_hw_support/intr_alloc.o
+Compiling .pioenvs/wake-word-test3/esp_hw_support/mac_addr.o
+Compiling .pioenvs/wake-word-test3/esp_hw_support/revision.o
+Compiling .pioenvs/wake-word-test3/esp_hw_support/sleep_modes.o
+Compiling .pioenvs/wake-word-test3/esp_hw_support/sleep_gpio.o
+Compiling .pioenvs/wake-word-test3/esp_hw_support/sleep_mac_bb.o
+Compiling .pioenvs/wake-word-test3/esp_hw_support/regi2c_ctrl.o
+Compiling .pioenvs/wake-word-test3/esp_hw_support/sleep_retention.o
+Compiling .pioenvs/wake-word-test3/esp_hw_support/sleep_wake_stub.o
+Compiling .pioenvs/wake-word-test3/esp_hw_support/port/esp32s3/rtc_clk.o
+Compiling .pioenvs/wake-word-test3/esp_hw_support/port/esp32s3/rtc_clk_init.o
+Compiling .pioenvs/wake-word-test3/esp_hw_support/port/esp32s3/rtc_init.o
+Compiling .pioenvs/wake-word-test3/esp_hw_support/port/esp32s3/rtc_pm.o
+Compiling .pioenvs/wake-word-test3/esp_hw_support/port/esp32s3/rtc_sleep.o
+Compiling .pioenvs/wake-word-test3/esp_hw_support/port/esp32s3/rtc_time.o
+Compiling .pioenvs/wake-word-test3/esp_hw_support/port/esp32s3/rtc_wdt.o
+Compiling .pioenvs/wake-word-test3/esp_hw_support/port/esp32s3/chip_info.o
+Compiling .pioenvs/wake-word-test3/esp_hw_support/port/async_memcpy_impl_gdma.o
+Compiling .pioenvs/wake-word-test3/esp_hw_support/port/esp32s3/dport_access.o
+Compiling .pioenvs/wake-word-test3/esp_hw_support/port/esp32s3/esp_hmac.o
+Compiling .pioenvs/wake-word-test3/esp_hw_support/port/esp32s3/esp_ds.o
+Compiling .pioenvs/wake-word-test3/esp_hw_support/port/esp32s3/esp_crypto_lock.o
+Compiling .pioenvs/wake-word-test3/esp_hw_support/port/esp32s3/spiram.o
+Compiling .pioenvs/wake-word-test3/esp_hw_support/port/esp32s3/sar_periph_ctrl.o
+Compiling .pioenvs/wake-word-test3/esp_hw_support/port/esp32s3/opiram_psram.o
+Compiling .pioenvs/wake-word-test3/esp_ipc/src/esp_ipc.o
+Archiving .pioenvs/wake-word-test3/esp-idf/esp_hw_support/libesp_hw_support.a
+Compiling .pioenvs/wake-word-test3/esp_ipc/src/esp_ipc_isr/esp_ipc_isr.o
+Compiling .pioenvs/wake-word-test3/esp_ipc/src/esp_ipc_isr/esp_ipc_isr_handler.o
+Compiling .pioenvs/wake-word-test3/esp_ipc/src/esp_ipc_isr/esp_ipc_isr_routines.o
+Compiling .pioenvs/wake-word-test3/esp_lcd/src/esp_lcd_common.o
+Archiving .pioenvs/wake-word-test3/esp-idf/esp_ipc/libesp_ipc.a
+Compiling .pioenvs/wake-word-test3/esp_lcd/src/esp_lcd_panel_io.o
+Compiling .pioenvs/wake-word-test3/esp_lcd/src/esp_lcd_panel_io_i2c.o
+Compiling .pioenvs/wake-word-test3/esp_lcd/src/esp_lcd_panel_io_i2s.o
+Compiling .pioenvs/wake-word-test3/esp_lcd/src/esp_lcd_panel_io_spi.o
+Compiling .pioenvs/wake-word-test3/esp_lcd/src/esp_lcd_panel_io_i80.o
+Compiling .pioenvs/wake-word-test3/esp_lcd/src/esp_lcd_panel_nt35510.o
+Compiling .pioenvs/wake-word-test3/esp_lcd/src/esp_lcd_panel_ssd1306.o
+Compiling .pioenvs/wake-word-test3/esp_lcd/src/esp_lcd_panel_st7789.o
+Compiling .pioenvs/wake-word-test3/esp_lcd/src/esp_lcd_panel_ops.o
+Compiling .pioenvs/wake-word-test3/esp_lcd/src/esp_lcd_rgb_panel.o
+Compiling .pioenvs/wake-word-test3/esp_local_ctrl/src/esp_local_ctrl.o
+Compiling .pioenvs/wake-word-test3/esp_local_ctrl/src/esp_local_ctrl_handler.o
+Archiving .pioenvs/wake-word-test3/esp-idf/esp_lcd/libesp_lcd.a
+Compiling .pioenvs/wake-word-test3/esp_local_ctrl/proto-c/esp_local_ctrl.pb-c.o
+Compiling .pioenvs/wake-word-test3/esp_netif/esp_netif_handlers.o
+Archiving .pioenvs/wake-word-test3/esp-idf/esp_local_ctrl/libesp_local_ctrl.a
+Compiling .pioenvs/wake-word-test3/esp_netif/esp_netif_objects.o
+Compiling .pioenvs/wake-word-test3/esp_netif/esp_netif_defaults.o
+Compiling .pioenvs/wake-word-test3/esp_netif/lwip/esp_netif_lwip.o
+Compiling .pioenvs/wake-word-test3/esp_netif/lwip/esp_netif_lwip_defaults.o
+Compiling .pioenvs/wake-word-test3/esp_netif/lwip/esp_netif_sta_list.o
+Compiling .pioenvs/wake-word-test3/esp_netif/loopback/esp_netif_loopback.o
+Compiling .pioenvs/wake-word-test3/esp_phy/src/phy_override.o
+Compiling .pioenvs/wake-word-test3/esp_phy/src/lib_printf.o
+Compiling .pioenvs/wake-word-test3/esp_phy/src/phy_init.o
+Archiving .pioenvs/wake-word-test3/esp-idf/esp_netif/libesp_netif.a
+Compiling .pioenvs/wake-word-test3/esp_pm/pm_locks.o
+Compiling .pioenvs/wake-word-test3/esp_pm/pm_trace.o
+Archiving .pioenvs/wake-word-test3/esp-idf/esp_phy/libesp_phy.a
+Compiling .pioenvs/wake-word-test3/esp_pm/pm_impl.o
+Compiling .pioenvs/wake-word-test3/esp_ringbuf/ringbuf.o
+Archiving .pioenvs/wake-word-test3/esp-idf/esp_pm/libesp_pm.a
+Compiling .pioenvs/wake-word-test3/esp_rom/patches/esp_rom_crc.o
+Compiling .pioenvs/wake-word-test3/esp_rom/patches/esp_rom_sys.o
+Compiling .pioenvs/wake-word-test3/esp_rom/patches/esp_rom_uart.o
+Compiling .pioenvs/wake-word-test3/esp_rom/patches/esp_rom_tjpgd.o
+Compiling .pioenvs/wake-word-test3/esp_rom/patches/esp_rom_efuse.o
+Compiling .pioenvs/wake-word-test3/esp_rom/patches/esp_rom_longjmp.o
+Compiling .pioenvs/wake-word-test3/esp_rom/patches/esp_rom_cache.o
+Archiving .pioenvs/wake-word-test3/esp-idf/esp_ringbuf/libesp_ringbuf.a
+Compiling .pioenvs/wake-word-test3/esp_rom/patches/esp_rom_cache_writeback_esp32s3.o
+Compiling .pioenvs/wake-word-test3/esp_serial_slave_link/essl.o
+Archiving .pioenvs/wake-word-test3/esp-idf/esp_rom/libesp_rom.a
+Compiling .pioenvs/wake-word-test3/esp_serial_slave_link/essl_sdio.o
+Compiling .pioenvs/wake-word-test3/esp_serial_slave_link/essl_spi.o
+Compiling .pioenvs/wake-word-test3/esp_system/esp_err.o
+Compiling .pioenvs/wake-word-test3/esp_system/crosscore_int.o
+Compiling .pioenvs/wake-word-test3/esp_system/freertos_hooks.o
+Archiving .pioenvs/wake-word-test3/esp-idf/esp_serial_slave_link/libesp_serial_slave_link.a
+Compiling .pioenvs/wake-word-test3/esp_system/int_wdt.o
+Compiling .pioenvs/wake-word-test3/esp_system/panic.o
+Compiling .pioenvs/wake-word-test3/esp_system/esp_system.o
+Compiling .pioenvs/wake-word-test3/esp_system/startup.o
+Compiling .pioenvs/wake-word-test3/esp_system/system_time.o
+Compiling .pioenvs/wake-word-test3/esp_system/stack_check.o
+Compiling .pioenvs/wake-word-test3/esp_system/task_wdt.o
+Compiling .pioenvs/wake-word-test3/esp_system/ubsan.o
+Compiling .pioenvs/wake-word-test3/esp_system/xt_wdt.o
+Compiling .pioenvs/wake-word-test3/esp_system/debug_stubs.o
+Compiling .pioenvs/wake-word-test3/esp_system/port/cpu_start.o
+Compiling .pioenvs/wake-word-test3/esp_system/port/panic_handler.o
+Compiling .pioenvs/wake-word-test3/esp_system/port/brownout.o
+Compiling .pioenvs/wake-word-test3/esp_system/port/soc/esp32s3/highint_hdl.o
+Compiling .pioenvs/wake-word-test3/esp_system/port/soc/esp32s3/clk.o
+Compiling .pioenvs/wake-word-test3/esp_system/port/soc/esp32s3/reset_reason.o
+Compiling .pioenvs/wake-word-test3/esp_system/port/soc/esp32s3/system_internal.o
+Compiling .pioenvs/wake-word-test3/esp_system/port/soc/esp32s3/cache_err_int.o
+Compiling .pioenvs/wake-word-test3/esp_system/port/soc/esp32s3/apb_backup_dma.o
+Compiling .pioenvs/wake-word-test3/esp_system/port/arch/xtensa/panic_arch.o
+Compiling .pioenvs/wake-word-test3/esp_system/port/arch/xtensa/panic_handler_asm.o
+Compiling .pioenvs/wake-word-test3/esp_system/port/arch/xtensa/expression_with_stack.o
+Compiling .pioenvs/wake-word-test3/esp_system/port/arch/xtensa/expression_with_stack_asm.o
+Compiling .pioenvs/wake-word-test3/esp_system/port/arch/xtensa/debug_helpers.o
+Compiling .pioenvs/wake-word-test3/esp_system/port/arch/xtensa/debug_helpers_asm.o
+Compiling .pioenvs/wake-word-test3/esp_system/port/arch/xtensa/debug_stubs.o
+Compiling .pioenvs/wake-word-test3/esp_system/port/arch/xtensa/trax.o
+Compiling .pioenvs/wake-word-test3/esp_timer/src/esp_timer.o
+Archiving .pioenvs/wake-word-test3/esp-idf/esp_system/libesp_system.a
+Compiling .pioenvs/wake-word-test3/esp_timer/src/ets_timer_legacy.o
+Compiling .pioenvs/wake-word-test3/esp_timer/src/system_time.o
+Compiling .pioenvs/wake-word-test3/esp_timer/src/esp_timer_impl_systimer.o
+Compiling .pioenvs/wake-word-test3/esp_websocket_client/esp_websocket_client.o
+Archiving .pioenvs/wake-word-test3/esp-idf/esp_timer/libesp_timer.a
+Compiling .pioenvs/wake-word-test3/esp_wifi/src/coexist.o
+Compiling .pioenvs/wake-word-test3/esp_wifi/src/mesh_event.o
+Compiling .pioenvs/wake-word-test3/esp_wifi/src/smartconfig.o
+Compiling .pioenvs/wake-word-test3/esp_wifi/src/smartconfig_ack.o
+Archiving .pioenvs/wake-word-test3/esp-idf/esp_websocket_client/libesp_websocket_client.a
+Compiling .pioenvs/wake-word-test3/esp_wifi/src/wifi_init.o
+Compiling .pioenvs/wake-word-test3/esp_wifi/src/wifi_default.o
+Compiling .pioenvs/wake-word-test3/esp_wifi/src/wifi_netif.o
+Compiling .pioenvs/wake-word-test3/esp_wifi/esp32s3/esp_adapter.o
+Compiling .pioenvs/wake-word-test3/espcoredump/src/core_dump_common.o
+Compiling .pioenvs/wake-word-test3/espcoredump/src/core_dump_checksum.o
+Compiling .pioenvs/wake-word-test3/espcoredump/src/core_dump_flash.o
+Archiving .pioenvs/wake-word-test3/esp-idf/esp_wifi/libesp_wifi.a
+Compiling .pioenvs/wake-word-test3/espcoredump/src/core_dump_uart.o
+Compiling .pioenvs/wake-word-test3/espcoredump/src/core_dump_elf.o
+Compiling .pioenvs/wake-word-test3/espcoredump/src/core_dump_binary.o
+Compiling .pioenvs/wake-word-test3/espcoredump/src/port/xtensa/core_dump_port.o
+Compiling .pioenvs/wake-word-test3/managed_components/espressif__esp-nn/src/activation_functions/esp_nn_relu_ansi.o
+Compiling .pioenvs/wake-word-test3/managed_components/espressif__esp-nn/src/basic_math/esp_nn_add_ansi.o
+Archiving .pioenvs/wake-word-test3/esp-idf/espcoredump/libespcoredump.a
+Compiling .pioenvs/wake-word-test3/managed_components/espressif__esp-nn/src/basic_math/esp_nn_mul_ansi.o
+Compiling .pioenvs/wake-word-test3/managed_components/espressif__esp-nn/src/convolution/esp_nn_conv_ansi.o
+Compiling .pioenvs/wake-word-test3/managed_components/espressif__esp-nn/src/convolution/esp_nn_conv_opt.o
+Compiling .pioenvs/wake-word-test3/managed_components/espressif__esp-nn/src/convolution/esp_nn_depthwise_conv_ansi.o
+Compiling .pioenvs/wake-word-test3/managed_components/espressif__esp-nn/src/convolution/esp_nn_depthwise_conv_opt.o
+Compiling .pioenvs/wake-word-test3/managed_components/espressif__esp-nn/src/fully_connected/esp_nn_fully_connected_ansi.o
+Compiling .pioenvs/wake-word-test3/managed_components/espressif__esp-nn/src/softmax/esp_nn_softmax_ansi.o
+Compiling .pioenvs/wake-word-test3/managed_components/espressif__esp-nn/src/softmax/esp_nn_softmax_opt.o
+Compiling .pioenvs/wake-word-test3/managed_components/espressif__esp-nn/src/pooling/esp_nn_avg_pool_ansi.o
+Compiling .pioenvs/wake-word-test3/managed_components/espressif__esp-nn/src/pooling/esp_nn_max_pool_ansi.o
+Compiling .pioenvs/wake-word-test3/managed_components/espressif__esp-nn/src/common/esp_nn_common_functions_esp32s3.o
+Compiling .pioenvs/wake-word-test3/managed_components/espressif__esp-nn/src/common/esp_nn_multiply_by_quantized_mult_esp32s3.o
+Compiling .pioenvs/wake-word-test3/managed_components/espressif__esp-nn/src/common/esp_nn_multiply_by_quantized_mult_ver1_esp32s3.o
+Compiling .pioenvs/wake-word-test3/managed_components/espressif__esp-nn/src/activation_functions/esp_nn_relu_s8_esp32s3.o
+Compiling .pioenvs/wake-word-test3/managed_components/espressif__esp-nn/src/basic_math/esp_nn_add_s8_esp32s3.o
+Compiling .pioenvs/wake-word-test3/managed_components/espressif__esp-nn/src/basic_math/esp_nn_mul_s8_esp32s3.o
+Compiling .pioenvs/wake-word-test3/managed_components/espressif__esp-nn/src/convolution/esp_nn_conv_esp32s3.o
+Compiling .pioenvs/wake-word-test3/managed_components/espressif__esp-nn/src/convolution/esp_nn_depthwise_conv_s8_esp32s3.o
+Compiling .pioenvs/wake-word-test3/managed_components/espressif__esp-nn/src/convolution/esp_nn_conv_s16_mult8_esp32s3.o
+Compiling .pioenvs/wake-word-test3/managed_components/espressif__esp-nn/src/convolution/esp_nn_conv_s8_mult8_1x1_esp32s3.o
+Compiling .pioenvs/wake-word-test3/managed_components/espressif__esp-nn/src/convolution/esp_nn_conv_s16_mult4_1x1_esp32s3.o
+Compiling .pioenvs/wake-word-test3/managed_components/espressif__esp-nn/src/convolution/esp_nn_conv_s8_filter_aligned_input_padded_esp32s3.o
+Compiling .pioenvs/wake-word-test3/managed_components/espressif__esp-nn/src/convolution/esp_nn_depthwise_conv_s8_mult1_3x3_padded_esp32s3.o
+Compiling .pioenvs/wake-word-test3/managed_components/espressif__esp-nn/src/convolution/esp_nn_depthwise_conv_s16_mult1_esp32s3.o
+Compiling .pioenvs/wake-word-test3/managed_components/espressif__esp-nn/src/convolution/esp_nn_depthwise_conv_s16_mult1_3x3_esp32s3.o
+Compiling .pioenvs/wake-word-test3/managed_components/espressif__esp-nn/src/convolution/esp_nn_depthwise_conv_s16_mult1_3x3_no_pad_esp32s3.o
+Compiling .pioenvs/wake-word-test3/managed_components/espressif__esp-nn/src/convolution/esp_nn_depthwise_conv_s16_mult8_3x3_esp32s3.o
+Compiling .pioenvs/wake-word-test3/managed_components/espressif__esp-nn/src/convolution/esp_nn_depthwise_conv_s16_mult4_esp32s3.o
+Compiling .pioenvs/wake-word-test3/managed_components/espressif__esp-nn/src/convolution/esp_nn_depthwise_conv_s16_mult8_esp32s3.o
+Compiling .pioenvs/wake-word-test3/managed_components/espressif__esp-nn/src/fully_connected/esp_nn_fully_connected_s8_esp32s3.o
+Compiling .pioenvs/wake-word-test3/managed_components/espressif__esp-nn/src/pooling/esp_nn_max_pool_s8_esp32s3.o
+Compiling .pioenvs/wake-word-test3/managed_components/espressif__esp-nn/src/pooling/esp_nn_avg_pool_s8_esp32s3.o
+Compiling .pioenvs/wake-word-test3/expat/expat/expat/lib/xmlparse.o
+Archiving .pioenvs/wake-word-test3/esp-idf/espressif__esp-nn/libespressif__esp-nn.a
+Compiling .pioenvs/wake-word-test3/expat/expat/expat/lib/xmlrole.o
+Compiling .pioenvs/wake-word-test3/expat/expat/expat/lib/xmltok.o
+Compiling .pioenvs/wake-word-test3/expat/expat/expat/lib/xmltok_impl.o
+Compiling .pioenvs/wake-word-test3/expat/expat/expat/lib/xmltok_ns.o
+Compiling .pioenvs/wake-word-test3/fatfs/diskio/diskio.o
+Compiling .pioenvs/wake-word-test3/fatfs/diskio/diskio_rawflash.o
+Compiling .pioenvs/wake-word-test3/fatfs/diskio/diskio_sdmmc.o
+Compiling .pioenvs/wake-word-test3/fatfs/diskio/diskio_wl.o
+Archiving .pioenvs/wake-word-test3/esp-idf/expat/libexpat.a
+Compiling .pioenvs/wake-word-test3/fatfs/src/ff.o
+Compiling .pioenvs/wake-word-test3/fatfs/port/freertos/ffsystem.o
+Compiling .pioenvs/wake-word-test3/fatfs/src/ffunicode.o
+Compiling .pioenvs/wake-word-test3/fatfs/vfs/vfs_fat.o
+Compiling .pioenvs/wake-word-test3/fatfs/vfs/vfs_fat_sdmmc.o
+Compiling .pioenvs/wake-word-test3/fatfs/vfs/vfs_fat_spiflash.o
+Compiling .pioenvs/wake-word-test3/freemodbus/freemodbus/common/esp_modbus_master.o
+Archiving .pioenvs/wake-word-test3/esp-idf/fatfs/libfatfs.a
+Compiling .pioenvs/wake-word-test3/freemodbus/freemodbus/common/esp_modbus_slave.o
+Compiling .pioenvs/wake-word-test3/freemodbus/freemodbus/modbus/mb.o
+Compiling .pioenvs/wake-word-test3/freemodbus/freemodbus/modbus/mb_m.o
+Compiling .pioenvs/wake-word-test3/freemodbus/freemodbus/modbus/ascii/mbascii.o
+Compiling .pioenvs/wake-word-test3/freemodbus/freemodbus/modbus/ascii/mbascii_m.o
+Compiling .pioenvs/wake-word-test3/freemodbus/freemodbus/modbus/rtu/mbrtu_m.o
+Compiling .pioenvs/wake-word-test3/freemodbus/freemodbus/modbus/rtu/mbrtu.o
+Compiling .pioenvs/wake-word-test3/freemodbus/freemodbus/modbus/rtu/mbcrc.o
+Compiling .pioenvs/wake-word-test3/freemodbus/freemodbus/modbus/tcp/mbtcp.o
+Compiling .pioenvs/wake-word-test3/freemodbus/freemodbus/modbus/tcp/mbtcp_m.o
+Compiling .pioenvs/wake-word-test3/freemodbus/freemodbus/port/port.o
+Compiling .pioenvs/wake-word-test3/freemodbus/freemodbus/port/portevent.o
+Compiling .pioenvs/wake-word-test3/freemodbus/freemodbus/port/portevent_m.o
+Compiling .pioenvs/wake-word-test3/freemodbus/freemodbus/port/portother.o
+Compiling .pioenvs/wake-word-test3/freemodbus/freemodbus/port/portother_m.o
+Compiling .pioenvs/wake-word-test3/freemodbus/freemodbus/port/portserial.o
+Compiling .pioenvs/wake-word-test3/freemodbus/freemodbus/port/portserial_m.o
+Compiling .pioenvs/wake-word-test3/freemodbus/freemodbus/port/porttimer.o
+Compiling .pioenvs/wake-word-test3/freemodbus/freemodbus/port/porttimer_m.o
+Compiling .pioenvs/wake-word-test3/freemodbus/freemodbus/modbus/functions/mbfunccoils.o
+Compiling .pioenvs/wake-word-test3/freemodbus/freemodbus/modbus/functions/mbfunccoils_m.o
+Compiling .pioenvs/wake-word-test3/freemodbus/freemodbus/modbus/functions/mbfuncdiag.o
+Compiling .pioenvs/wake-word-test3/freemodbus/freemodbus/modbus/functions/mbfuncdisc.o
+Compiling .pioenvs/wake-word-test3/freemodbus/freemodbus/modbus/functions/mbfuncdisc_m.o
+Compiling .pioenvs/wake-word-test3/freemodbus/freemodbus/modbus/functions/mbfuncholding.o
+Compiling .pioenvs/wake-word-test3/freemodbus/freemodbus/modbus/functions/mbfuncholding_m.o
+Compiling .pioenvs/wake-word-test3/freemodbus/freemodbus/modbus/functions/mbfuncinput.o
+Compiling .pioenvs/wake-word-test3/freemodbus/freemodbus/modbus/functions/mbfuncinput_m.o
+Compiling .pioenvs/wake-word-test3/freemodbus/freemodbus/modbus/functions/mbfuncother.o
+Compiling .pioenvs/wake-word-test3/freemodbus/freemodbus/modbus/functions/mbutils.o
+Compiling .pioenvs/wake-word-test3/freemodbus/freemodbus/serial_slave/modbus_controller/mbc_serial_slave.o
+Compiling .pioenvs/wake-word-test3/freemodbus/freemodbus/serial_master/modbus_controller/mbc_serial_master.o
+Compiling .pioenvs/wake-word-test3/freemodbus/freemodbus/tcp_slave/port/port_tcp_slave.o
+Compiling .pioenvs/wake-word-test3/freemodbus/freemodbus/tcp_slave/modbus_controller/mbc_tcp_slave.o
+Compiling .pioenvs/wake-word-test3/freemodbus/freemodbus/tcp_master/modbus_controller/mbc_tcp_master.o
+Compiling .pioenvs/wake-word-test3/freemodbus/freemodbus/tcp_master/port/port_tcp_master.o
+Compiling .pioenvs/wake-word-test3/freemodbus/freemodbus/common/esp_modbus_master_tcp.o
+Compiling .pioenvs/wake-word-test3/freemodbus/freemodbus/common/esp_modbus_slave_tcp.o
+Compiling .pioenvs/wake-word-test3/freemodbus/freemodbus/common/esp_modbus_master_serial.o
+Compiling .pioenvs/wake-word-test3/freemodbus/freemodbus/common/esp_modbus_slave_serial.o
+Compiling .pioenvs/wake-word-test3/freertos/port/xtensa/port.o
+Archiving .pioenvs/wake-word-test3/esp-idf/freemodbus/libfreemodbus.a
+Compiling .pioenvs/wake-word-test3/freertos/port/xtensa/portasm.o
+Compiling .pioenvs/wake-word-test3/freertos/port/xtensa/xtensa_context.o
+Compiling .pioenvs/wake-word-test3/freertos/port/xtensa/xtensa_init.o
+Compiling .pioenvs/wake-word-test3/freertos/port/xtensa/xtensa_overlay_os_hook.o
+Compiling .pioenvs/wake-word-test3/freertos/port/xtensa/xtensa_vector_defaults.o
+Compiling .pioenvs/wake-word-test3/freertos/port/xtensa/xtensa_vectors.o
+Compiling .pioenvs/wake-word-test3/freertos/esp_additions/task_snapshot.o
+Compiling .pioenvs/wake-word-test3/freertos/port/port_common.o
+Compiling .pioenvs/wake-word-test3/freertos/port/port_systick.o
+Compiling .pioenvs/wake-word-test3/freertos/croutine.o
+Compiling .pioenvs/wake-word-test3/freertos/event_groups.o
+Compiling .pioenvs/wake-word-test3/freertos/list.o
+Compiling .pioenvs/wake-word-test3/freertos/queue.o
+Compiling .pioenvs/wake-word-test3/freertos/tasks.o
+Compiling .pioenvs/wake-word-test3/freertos/timers.o
+Compiling .pioenvs/wake-word-test3/freertos/stream_buffer.o
+Compiling .pioenvs/wake-word-test3/freertos/FreeRTOS-openocd.o
+Compiling .pioenvs/wake-word-test3/freertos/freertos_v8_compat.o
+Compiling .pioenvs/wake-word-test3/hal/wdt_hal_iram.o
+Archiving .pioenvs/wake-word-test3/esp-idf/freertos/libfreertos.a
+Compiling .pioenvs/wake-word-test3/hal/mpu_hal.o
+Compiling .pioenvs/wake-word-test3/hal/cpu_hal.o
+Compiling .pioenvs/wake-word-test3/hal/efuse_hal.o
+Compiling .pioenvs/wake-word-test3/hal/esp32s3/efuse_hal.o
+Compiling .pioenvs/wake-word-test3/hal/rmt_hal.o
+Compiling .pioenvs/wake-word-test3/hal/rtc_io_hal.o
+Compiling .pioenvs/wake-word-test3/hal/spi_hal.o
+Compiling .pioenvs/wake-word-test3/hal/spi_hal_iram.o
+Compiling .pioenvs/wake-word-test3/hal/spi_slave_hal.o
+Compiling .pioenvs/wake-word-test3/hal/spi_slave_hal_iram.o
+Compiling .pioenvs/wake-word-test3/hal/i2s_hal.o
+Compiling .pioenvs/wake-word-test3/hal/sigmadelta_hal.o
+Compiling .pioenvs/wake-word-test3/hal/timer_hal.o
+Compiling .pioenvs/wake-word-test3/hal/ledc_hal.o
+Compiling .pioenvs/wake-word-test3/hal/ledc_hal_iram.o
+Compiling .pioenvs/wake-word-test3/hal/i2c_hal.o
+Compiling .pioenvs/wake-word-test3/hal/i2c_hal_iram.o
+Compiling .pioenvs/wake-word-test3/hal/gpio_hal.o
+Compiling .pioenvs/wake-word-test3/hal/uart_hal.o
+Compiling .pioenvs/wake-word-test3/hal/uart_hal_iram.o
+Compiling .pioenvs/wake-word-test3/hal/spi_flash_hal.o
+Compiling .pioenvs/wake-word-test3/hal/spi_flash_hal_iram.o
+Compiling .pioenvs/wake-word-test3/hal/spi_flash_encrypt_hal_iram.o
+Compiling .pioenvs/wake-word-test3/hal/soc_hal.o
+Compiling .pioenvs/wake-word-test3/hal/interrupt_controller_hal.o
+Compiling .pioenvs/wake-word-test3/hal/sha_hal.o
+Compiling .pioenvs/wake-word-test3/hal/aes_hal.o
+Compiling .pioenvs/wake-word-test3/hal/twai_hal.o
+Compiling .pioenvs/wake-word-test3/hal/twai_hal_iram.o
+Compiling .pioenvs/wake-word-test3/hal/adc_hal.o
+Compiling .pioenvs/wake-word-test3/hal/ds_hal.o
+Compiling .pioenvs/wake-word-test3/hal/gdma_hal.o
+Compiling .pioenvs/wake-word-test3/hal/lcd_hal.o
+Compiling .pioenvs/wake-word-test3/hal/mcpwm_hal.o
+Compiling .pioenvs/wake-word-test3/hal/pcnt_hal.o
+Compiling .pioenvs/wake-word-test3/hal/spi_flash_hal_gpspi.o
+Compiling .pioenvs/wake-word-test3/hal/spi_slave_hd_hal.o
+Compiling .pioenvs/wake-word-test3/hal/systimer_hal.o
+Compiling .pioenvs/wake-word-test3/hal/touch_sensor_hal.o
+Compiling .pioenvs/wake-word-test3/hal/usb_hal.o
+Compiling .pioenvs/wake-word-test3/hal/usb_phy_hal.o
+Compiling .pioenvs/wake-word-test3/hal/xt_wdt_hal.o
+Compiling .pioenvs/wake-word-test3/hal/esp32s3/brownout_hal.o
+Compiling .pioenvs/wake-word-test3/hal/esp32s3/hmac_hal.o
+Compiling .pioenvs/wake-word-test3/hal/esp32s3/interrupt_descriptor_table.o
+Compiling .pioenvs/wake-word-test3/hal/esp32s3/touch_sensor_hal.o
+Compiling .pioenvs/wake-word-test3/hal/esp32s3/rtc_cntl_hal.o
+Compiling .pioenvs/wake-word-test3/hal/usb_dwc_hal.o
+Compiling .pioenvs/wake-word-test3/heap/heap_caps.o
+Archiving .pioenvs/wake-word-test3/esp-idf/hal/libhal.a
+Compiling .pioenvs/wake-word-test3/heap/heap_caps_init.o
+Compiling .pioenvs/wake-word-test3/heap/multi_heap.o
+Compiling .pioenvs/wake-word-test3/heap/heap_tlsf.o
+Compiling .pioenvs/wake-word-test3/heap/port/memory_layout_utils.o
+Compiling .pioenvs/wake-word-test3/heap/port/esp32s3/memory_layout.o
+Compiling .pioenvs/wake-word-test3/jsmn/src/jsmn.o
+Archiving .pioenvs/wake-word-test3/esp-idf/jsmn/libjsmn.a
+Compiling .pioenvs/wake-word-test3/json/cJSON/cJSON.o
+Archiving .pioenvs/wake-word-test3/esp-idf/heap/libheap.a
+Compiling .pioenvs/wake-word-test3/json/cJSON/cJSON_Utils.o
+Compiling .pioenvs/wake-word-test3/libsodium/libsodium/src/libsodium/crypto_aead/chacha20poly1305/sodium/aead_chacha20poly1305.o
+Compiling .pioenvs/wake-word-test3/libsodium/libsodium/src/libsodium/crypto_aead/xchacha20poly1305/sodium/aead_xchacha20poly1305.o
+Archiving .pioenvs/wake-word-test3/esp-idf/json/libjson.a
+Compiling .pioenvs/wake-word-test3/libsodium/libsodium/src/libsodium/crypto_auth/crypto_auth.o
+Compiling .pioenvs/wake-word-test3/libsodium/libsodium/src/libsodium/crypto_auth/hmacsha256/auth_hmacsha256.o
+Compiling .pioenvs/wake-word-test3/libsodium/libsodium/src/libsodium/crypto_auth/hmacsha512/auth_hmacsha512.o
+Compiling .pioenvs/wake-word-test3/libsodium/libsodium/src/libsodium/crypto_auth/hmacsha512256/auth_hmacsha512256.o
+Compiling .pioenvs/wake-word-test3/libsodium/libsodium/src/libsodium/crypto_box/crypto_box.o
+Compiling .pioenvs/wake-word-test3/libsodium/libsodium/src/libsodium/crypto_box/crypto_box_easy.o
+Compiling .pioenvs/wake-word-test3/libsodium/libsodium/src/libsodium/crypto_box/crypto_box_seal.o
+Compiling .pioenvs/wake-word-test3/libsodium/libsodium/src/libsodium/crypto_box/curve25519xchacha20poly1305/box_curve25519xchacha20poly1305.o
+Compiling .pioenvs/wake-word-test3/libsodium/libsodium/src/libsodium/crypto_box/curve25519xchacha20poly1305/box_seal_curve25519xchacha20poly1305.o
+Compiling .pioenvs/wake-word-test3/libsodium/libsodium/src/libsodium/crypto_box/curve25519xsalsa20poly1305/box_curve25519xsalsa20poly1305.o
+Compiling .pioenvs/wake-word-test3/libsodium/libsodium/src/libsodium/crypto_core/ed25519/core_ed25519.o
+Compiling .pioenvs/wake-word-test3/libsodium/libsodium/src/libsodium/crypto_core/ed25519/core_ristretto255.o
+Compiling .pioenvs/wake-word-test3/libsodium/libsodium/src/libsodium/crypto_core/ed25519/ref10/ed25519_ref10.o
+Compiling .pioenvs/wake-word-test3/libsodium/libsodium/src/libsodium/crypto_core/hchacha20/core_hchacha20.o
+Compiling .pioenvs/wake-word-test3/libsodium/libsodium/src/libsodium/crypto_core/hsalsa20/core_hsalsa20.o
+Compiling .pioenvs/wake-word-test3/libsodium/libsodium/src/libsodium/crypto_core/hsalsa20/ref2/core_hsalsa20_ref2.o
+Compiling .pioenvs/wake-word-test3/libsodium/libsodium/src/libsodium/crypto_core/salsa/ref/core_salsa_ref.o
+Compiling .pioenvs/wake-word-test3/libsodium/libsodium/src/libsodium/crypto_generichash/blake2b/generichash_blake2.o
+Compiling .pioenvs/wake-word-test3/libsodium/libsodium/src/libsodium/crypto_generichash/blake2b/ref/blake2b-compress-avx2.o
+Compiling .pioenvs/wake-word-test3/libsodium/libsodium/src/libsodium/crypto_generichash/blake2b/ref/blake2b-compress-ref.o
+Compiling .pioenvs/wake-word-test3/libsodium/libsodium/src/libsodium/crypto_generichash/blake2b/ref/blake2b-compress-ssse3.o
+Compiling .pioenvs/wake-word-test3/libsodium/libsodium/src/libsodium/crypto_generichash/blake2b/ref/blake2b-ref.o
+Compiling .pioenvs/wake-word-test3/libsodium/libsodium/src/libsodium/crypto_generichash/blake2b/ref/generichash_blake2b.o
+Compiling .pioenvs/wake-word-test3/libsodium/libsodium/src/libsodium/crypto_generichash/crypto_generichash.o
+Compiling .pioenvs/wake-word-test3/libsodium/libsodium/src/libsodium/crypto_hash/crypto_hash.o
+Compiling .pioenvs/wake-word-test3/libsodium/libsodium/src/libsodium/crypto_hash/sha256/cp/hash_sha256_cp.o
+Compiling .pioenvs/wake-word-test3/libsodium/libsodium/src/libsodium/crypto_hash/sha256/hash_sha256.o
+Compiling .pioenvs/wake-word-test3/libsodium/libsodium/src/libsodium/crypto_hash/sha512/cp/hash_sha512_cp.o
+Compiling .pioenvs/wake-word-test3/libsodium/libsodium/src/libsodium/crypto_hash/sha512/hash_sha512.o
+Compiling .pioenvs/wake-word-test3/libsodium/libsodium/src/libsodium/crypto_kdf/blake2b/kdf_blake2b.o
+Compiling .pioenvs/wake-word-test3/libsodium/libsodium/src/libsodium/crypto_kdf/crypto_kdf.o
+Compiling .pioenvs/wake-word-test3/libsodium/libsodium/src/libsodium/crypto_kx/crypto_kx.o
+Compiling .pioenvs/wake-word-test3/libsodium/libsodium/src/libsodium/crypto_onetimeauth/crypto_onetimeauth.o
+Compiling .pioenvs/wake-word-test3/libsodium/libsodium/src/libsodium/crypto_onetimeauth/poly1305/donna/poly1305_donna.o
+Compiling .pioenvs/wake-word-test3/libsodium/libsodium/src/libsodium/crypto_onetimeauth/poly1305/onetimeauth_poly1305.o
+Compiling .pioenvs/wake-word-test3/libsodium/libsodium/src/libsodium/crypto_pwhash/argon2/argon2-core.o
+Compiling .pioenvs/wake-word-test3/libsodium/libsodium/src/libsodium/crypto_pwhash/argon2/argon2-encoding.o
+Compiling .pioenvs/wake-word-test3/libsodium/libsodium/src/libsodium/crypto_pwhash/argon2/argon2-fill-block-avx2.o
+Compiling .pioenvs/wake-word-test3/libsodium/libsodium/src/libsodium/crypto_pwhash/argon2/argon2-fill-block-avx512f.o
+Compiling .pioenvs/wake-word-test3/libsodium/libsodium/src/libsodium/crypto_pwhash/argon2/argon2-fill-block-ref.o
+Compiling .pioenvs/wake-word-test3/libsodium/libsodium/src/libsodium/crypto_pwhash/argon2/argon2-fill-block-ssse3.o
+Compiling .pioenvs/wake-word-test3/libsodium/libsodium/src/libsodium/crypto_pwhash/argon2/argon2.o
+Compiling .pioenvs/wake-word-test3/libsodium/libsodium/src/libsodium/crypto_pwhash/argon2/blake2b-long.o
+Compiling .pioenvs/wake-word-test3/libsodium/libsodium/src/libsodium/crypto_pwhash/argon2/pwhash_argon2i.o
+Compiling .pioenvs/wake-word-test3/libsodium/libsodium/src/libsodium/crypto_pwhash/argon2/pwhash_argon2id.o
+Compiling .pioenvs/wake-word-test3/libsodium/libsodium/src/libsodium/crypto_pwhash/crypto_pwhash.o
+Compiling .pioenvs/wake-word-test3/libsodium/libsodium/src/libsodium/crypto_pwhash/scryptsalsa208sha256/crypto_scrypt-common.o
+Compiling .pioenvs/wake-word-test3/libsodium/libsodium/src/libsodium/crypto_pwhash/scryptsalsa208sha256/nosse/pwhash_scryptsalsa208sha256_nosse.o
+Compiling .pioenvs/wake-word-test3/libsodium/libsodium/src/libsodium/crypto_pwhash/scryptsalsa208sha256/pbkdf2-sha256.o
+Compiling .pioenvs/wake-word-test3/libsodium/libsodium/src/libsodium/crypto_pwhash/scryptsalsa208sha256/pwhash_scryptsalsa208sha256.o
+Compiling .pioenvs/wake-word-test3/libsodium/libsodium/src/libsodium/crypto_pwhash/scryptsalsa208sha256/scrypt_platform.o
+Compiling .pioenvs/wake-word-test3/libsodium/libsodium/src/libsodium/crypto_scalarmult/crypto_scalarmult.o
+Compiling .pioenvs/wake-word-test3/libsodium/libsodium/src/libsodium/crypto_scalarmult/curve25519/ref10/x25519_ref10.o
+Compiling .pioenvs/wake-word-test3/libsodium/libsodium/src/libsodium/crypto_scalarmult/curve25519/sandy2x/consts.o
+Compiling .pioenvs/wake-word-test3/libsodium/libsodium/src/libsodium/crypto_scalarmult/curve25519/sandy2x/curve25519_sandy2x.o
+Compiling .pioenvs/wake-word-test3/libsodium/libsodium/src/libsodium/crypto_scalarmult/curve25519/sandy2x/fe51_invert.o
+Compiling .pioenvs/wake-word-test3/libsodium/libsodium/src/libsodium/crypto_scalarmult/curve25519/sandy2x/fe51_mul.o
+Compiling .pioenvs/wake-word-test3/libsodium/libsodium/src/libsodium/crypto_scalarmult/curve25519/sandy2x/fe51_nsquare.o
+Compiling .pioenvs/wake-word-test3/libsodium/libsodium/src/libsodium/crypto_scalarmult/curve25519/sandy2x/fe51_pack.o
+Compiling .pioenvs/wake-word-test3/libsodium/libsodium/src/libsodium/crypto_scalarmult/curve25519/sandy2x/fe_frombytes_sandy2x.o
+Compiling .pioenvs/wake-word-test3/libsodium/libsodium/src/libsodium/crypto_scalarmult/curve25519/sandy2x/ladder.o
+Compiling .pioenvs/wake-word-test3/libsodium/libsodium/src/libsodium/crypto_scalarmult/curve25519/sandy2x/sandy2x.o
+Compiling .pioenvs/wake-word-test3/libsodium/libsodium/src/libsodium/crypto_scalarmult/curve25519/scalarmult_curve25519.o
+Compiling .pioenvs/wake-word-test3/libsodium/libsodium/src/libsodium/crypto_scalarmult/ed25519/ref10/scalarmult_ed25519_ref10.o
+Compiling .pioenvs/wake-word-test3/libsodium/libsodium/src/libsodium/crypto_scalarmult/ristretto255/ref10/scalarmult_ristretto255_ref10.o
+Compiling .pioenvs/wake-word-test3/libsodium/libsodium/src/libsodium/crypto_secretbox/crypto_secretbox.o
+Compiling .pioenvs/wake-word-test3/libsodium/libsodium/src/libsodium/crypto_secretbox/crypto_secretbox_easy.o
+Compiling .pioenvs/wake-word-test3/libsodium/libsodium/src/libsodium/crypto_secretbox/xchacha20poly1305/secretbox_xchacha20poly1305.o
+Compiling .pioenvs/wake-word-test3/libsodium/libsodium/src/libsodium/crypto_secretbox/xsalsa20poly1305/secretbox_xsalsa20poly1305.o
+Compiling .pioenvs/wake-word-test3/libsodium/libsodium/src/libsodium/crypto_secretstream/xchacha20poly1305/secretstream_xchacha20poly1305.o
+Compiling .pioenvs/wake-word-test3/libsodium/libsodium/src/libsodium/crypto_shorthash/crypto_shorthash.o
+Compiling .pioenvs/wake-word-test3/libsodium/libsodium/src/libsodium/crypto_shorthash/siphash24/ref/shorthash_siphash24_ref.o
+Compiling .pioenvs/wake-word-test3/libsodium/libsodium/src/libsodium/crypto_shorthash/siphash24/ref/shorthash_siphashx24_ref.o
+Compiling .pioenvs/wake-word-test3/libsodium/libsodium/src/libsodium/crypto_shorthash/siphash24/shorthash_siphash24.o
+Compiling .pioenvs/wake-word-test3/libsodium/libsodium/src/libsodium/crypto_shorthash/siphash24/shorthash_siphashx24.o
+Compiling .pioenvs/wake-word-test3/libsodium/libsodium/src/libsodium/crypto_sign/crypto_sign.o
+Compiling .pioenvs/wake-word-test3/libsodium/libsodium/src/libsodium/crypto_sign/ed25519/ref10/keypair.o
+Compiling .pioenvs/wake-word-test3/libsodium/libsodium/src/libsodium/crypto_sign/ed25519/ref10/obsolete.o
+Compiling .pioenvs/wake-word-test3/libsodium/libsodium/src/libsodium/crypto_sign/ed25519/ref10/open.o
+Compiling .pioenvs/wake-word-test3/libsodium/libsodium/src/libsodium/crypto_sign/ed25519/ref10/sign.o
+Compiling .pioenvs/wake-word-test3/libsodium/libsodium/src/libsodium/crypto_sign/ed25519/sign_ed25519.o
+Compiling .pioenvs/wake-word-test3/libsodium/libsodium/src/libsodium/crypto_stream/chacha20/dolbeau/chacha20_dolbeau-avx2.o
+Compiling .pioenvs/wake-word-test3/libsodium/libsodium/src/libsodium/crypto_stream/chacha20/dolbeau/chacha20_dolbeau-ssse3.o
+Compiling .pioenvs/wake-word-test3/libsodium/libsodium/src/libsodium/crypto_stream/chacha20/ref/chacha20_ref.o
+Compiling .pioenvs/wake-word-test3/libsodium/libsodium/src/libsodium/crypto_stream/chacha20/stream_chacha20.o
+Compiling .pioenvs/wake-word-test3/libsodium/libsodium/src/libsodium/crypto_stream/crypto_stream.o
+Compiling .pioenvs/wake-word-test3/libsodium/libsodium/src/libsodium/crypto_stream/salsa20/ref/salsa20_ref.o
+Compiling .pioenvs/wake-word-test3/libsodium/libsodium/src/libsodium/crypto_stream/salsa20/stream_salsa20.o
+Compiling .pioenvs/wake-word-test3/libsodium/libsodium/src/libsodium/crypto_stream/salsa20/xmm6/salsa20_xmm6-asm.o
+Compiling .pioenvs/wake-word-test3/libsodium/libsodium/src/libsodium/crypto_stream/salsa20/xmm6/salsa20_xmm6.o
+Compiling .pioenvs/wake-word-test3/libsodium/libsodium/src/libsodium/crypto_stream/salsa20/xmm6int/salsa20_xmm6int-avx2.o
+Compiling .pioenvs/wake-word-test3/libsodium/libsodium/src/libsodium/crypto_stream/salsa20/xmm6int/salsa20_xmm6int-sse2.o
+Compiling .pioenvs/wake-word-test3/libsodium/libsodium/src/libsodium/crypto_stream/salsa2012/ref/stream_salsa2012_ref.o
+Compiling .pioenvs/wake-word-test3/libsodium/libsodium/src/libsodium/crypto_stream/salsa2012/stream_salsa2012.o
+Compiling .pioenvs/wake-word-test3/libsodium/libsodium/src/libsodium/crypto_stream/salsa208/ref/stream_salsa208_ref.o
+Compiling .pioenvs/wake-word-test3/libsodium/libsodium/src/libsodium/crypto_stream/salsa208/stream_salsa208.o
+Compiling .pioenvs/wake-word-test3/libsodium/libsodium/src/libsodium/crypto_stream/xchacha20/stream_xchacha20.o
+Compiling .pioenvs/wake-word-test3/libsodium/libsodium/src/libsodium/crypto_stream/xsalsa20/stream_xsalsa20.o
+Compiling .pioenvs/wake-word-test3/libsodium/libsodium/src/libsodium/crypto_verify/sodium/verify.o
+Compiling .pioenvs/wake-word-test3/libsodium/libsodium/src/libsodium/randombytes/randombytes.o
+Compiling .pioenvs/wake-word-test3/libsodium/libsodium/src/libsodium/sodium/codecs.o
+Compiling .pioenvs/wake-word-test3/libsodium/libsodium/src/libsodium/sodium/core.o
+Compiling .pioenvs/wake-word-test3/libsodium/libsodium/src/libsodium/sodium/runtime.o
+Compiling .pioenvs/wake-word-test3/libsodium/libsodium/src/libsodium/sodium/utils.o
+Compiling .pioenvs/wake-word-test3/libsodium/libsodium/src/libsodium/sodium/version.o
+Compiling .pioenvs/wake-word-test3/libsodium/port/randombytes_esp32.o
+Compiling .pioenvs/wake-word-test3/log/log.o
+Archiving .pioenvs/wake-word-test3/esp-idf/libsodium/liblibsodium.a
+Compiling .pioenvs/wake-word-test3/log/log_buffers.o
+Compiling .pioenvs/wake-word-test3/log/log_freertos.o
+Compiling .pioenvs/wake-word-test3/lwip/apps/sntp/sntp.o
+Archiving .pioenvs/wake-word-test3/esp-idf/log/liblog.a
+Compiling .pioenvs/wake-word-test3/lwip/lwip/src/api/api_lib.o
+Compiling .pioenvs/wake-word-test3/lwip/lwip/src/api/api_msg.o
+Compiling .pioenvs/wake-word-test3/lwip/lwip/src/api/err.o
+Compiling .pioenvs/wake-word-test3/lwip/lwip/src/api/if_api.o
+Compiling .pioenvs/wake-word-test3/lwip/lwip/src/api/netbuf.o
+Compiling .pioenvs/wake-word-test3/lwip/lwip/src/api/netdb.o
+Compiling .pioenvs/wake-word-test3/lwip/lwip/src/api/netifapi.o
+Compiling .pioenvs/wake-word-test3/lwip/lwip/src/api/sockets.o
+Compiling .pioenvs/wake-word-test3/lwip/lwip/src/api/tcpip.o
+Compiling .pioenvs/wake-word-test3/lwip/lwip/src/apps/sntp/sntp.o
+Compiling .pioenvs/wake-word-test3/lwip/lwip/src/apps/netbiosns/netbiosns.o
+Compiling .pioenvs/wake-word-test3/lwip/lwip/src/core/def.o
+Compiling .pioenvs/wake-word-test3/lwip/lwip/src/core/dns.o
+Compiling .pioenvs/wake-word-test3/lwip/lwip/src/core/inet_chksum.o
+Compiling .pioenvs/wake-word-test3/lwip/lwip/src/core/init.o
+Compiling .pioenvs/wake-word-test3/lwip/lwip/src/core/ip.o
+Compiling .pioenvs/wake-word-test3/lwip/lwip/src/core/mem.o
+Compiling .pioenvs/wake-word-test3/lwip/lwip/src/core/memp.o
+Compiling .pioenvs/wake-word-test3/lwip/lwip/src/core/netif.o
+Compiling .pioenvs/wake-word-test3/lwip/lwip/src/core/pbuf.o
+Compiling .pioenvs/wake-word-test3/lwip/lwip/src/core/raw.o
+Compiling .pioenvs/wake-word-test3/lwip/lwip/src/core/stats.o
+Compiling .pioenvs/wake-word-test3/lwip/lwip/src/core/sys.o
+Compiling .pioenvs/wake-word-test3/lwip/lwip/src/core/tcp.o
+Compiling .pioenvs/wake-word-test3/lwip/lwip/src/core/tcp_in.o
+Compiling .pioenvs/wake-word-test3/lwip/lwip/src/core/tcp_out.o
+Compiling .pioenvs/wake-word-test3/lwip/lwip/src/core/timeouts.o
+Compiling .pioenvs/wake-word-test3/lwip/lwip/src/core/udp.o
+Compiling .pioenvs/wake-word-test3/lwip/lwip/src/core/ipv4/autoip.o
+Compiling .pioenvs/wake-word-test3/lwip/lwip/src/core/ipv4/dhcp.o
+Compiling .pioenvs/wake-word-test3/lwip/lwip/src/core/ipv4/etharp.o
+Compiling .pioenvs/wake-word-test3/lwip/lwip/src/core/ipv4/icmp.o
+Compiling .pioenvs/wake-word-test3/lwip/lwip/src/core/ipv4/igmp.o
+Compiling .pioenvs/wake-word-test3/lwip/lwip/src/core/ipv4/ip4.o
+Compiling .pioenvs/wake-word-test3/lwip/lwip/src/core/ipv4/ip4_napt.o
+Compiling .pioenvs/wake-word-test3/lwip/lwip/src/core/ipv4/ip4_addr.o
+Compiling .pioenvs/wake-word-test3/lwip/lwip/src/core/ipv4/ip4_frag.o
+Compiling .pioenvs/wake-word-test3/lwip/lwip/src/core/ipv6/dhcp6.o
+Compiling .pioenvs/wake-word-test3/lwip/lwip/src/core/ipv6/ethip6.o
+Compiling .pioenvs/wake-word-test3/lwip/lwip/src/core/ipv6/icmp6.o
+Compiling .pioenvs/wake-word-test3/lwip/lwip/src/core/ipv6/inet6.o
+Compiling .pioenvs/wake-word-test3/lwip/lwip/src/core/ipv6/ip6.o
+Compiling .pioenvs/wake-word-test3/lwip/lwip/src/core/ipv6/ip6_addr.o
+Compiling .pioenvs/wake-word-test3/lwip/lwip/src/core/ipv6/ip6_frag.o
+Compiling .pioenvs/wake-word-test3/lwip/lwip/src/core/ipv6/mld6.o
+Compiling .pioenvs/wake-word-test3/lwip/lwip/src/core/ipv6/nd6.o
+Compiling .pioenvs/wake-word-test3/lwip/lwip/src/netif/ethernet.o
+Compiling .pioenvs/wake-word-test3/lwip/lwip/src/netif/lowpan6.o
+Compiling .pioenvs/wake-word-test3/lwip/lwip/src/netif/slipif.o
+Compiling .pioenvs/wake-word-test3/lwip/lwip/src/netif/ppp/auth.o
+Compiling .pioenvs/wake-word-test3/lwip/lwip/src/netif/ppp/ccp.o
+Compiling .pioenvs/wake-word-test3/lwip/lwip/src/netif/ppp/chap-md5.o
+Compiling .pioenvs/wake-word-test3/lwip/lwip/src/netif/ppp/chap-new.o
+Compiling .pioenvs/wake-word-test3/lwip/lwip/src/netif/ppp/chap_ms.o
+Compiling .pioenvs/wake-word-test3/lwip/lwip/src/netif/ppp/demand.o
+Compiling .pioenvs/wake-word-test3/lwip/lwip/src/netif/ppp/eap.o
+Compiling .pioenvs/wake-word-test3/lwip/lwip/src/netif/ppp/ecp.o
+Compiling .pioenvs/wake-word-test3/lwip/lwip/src/netif/ppp/eui64.o
+Compiling .pioenvs/wake-word-test3/lwip/lwip/src/netif/ppp/fsm.o
+Compiling .pioenvs/wake-word-test3/lwip/lwip/src/netif/ppp/ipcp.o
+Compiling .pioenvs/wake-word-test3/lwip/lwip/src/netif/ppp/ipv6cp.o
+Compiling .pioenvs/wake-word-test3/lwip/lwip/src/netif/ppp/lcp.o
+Compiling .pioenvs/wake-word-test3/lwip/lwip/src/netif/ppp/magic.o
+Compiling .pioenvs/wake-word-test3/lwip/lwip/src/netif/ppp/mppe.o
+Compiling .pioenvs/wake-word-test3/lwip/lwip/src/netif/ppp/multilink.o
+Compiling .pioenvs/wake-word-test3/lwip/lwip/src/netif/ppp/ppp.o
+Compiling .pioenvs/wake-word-test3/lwip/lwip/src/netif/ppp/pppapi.o
+Compiling .pioenvs/wake-word-test3/lwip/lwip/src/netif/ppp/pppcrypt.o
+Compiling .pioenvs/wake-word-test3/lwip/lwip/src/netif/ppp/pppoe.o
+Compiling .pioenvs/wake-word-test3/lwip/lwip/src/netif/ppp/pppol2tp.o
+Compiling .pioenvs/wake-word-test3/lwip/lwip/src/netif/ppp/pppos.o
+Compiling .pioenvs/wake-word-test3/lwip/lwip/src/netif/ppp/upap.o
+Compiling .pioenvs/wake-word-test3/lwip/lwip/src/netif/ppp/utils.o
+Compiling .pioenvs/wake-word-test3/lwip/lwip/src/netif/ppp/vj.o
+Compiling .pioenvs/wake-word-test3/lwip/port/esp32/hooks/tcp_isn_default.o
+Compiling .pioenvs/wake-word-test3/lwip/port/esp32/hooks/lwip_default_hooks.o
+Compiling .pioenvs/wake-word-test3/lwip/port/esp32/debug/lwip_debug.o
+Compiling .pioenvs/wake-word-test3/lwip/port/esp32/freertos/sys_arch.o
+Compiling .pioenvs/wake-word-test3/lwip/port/esp32/netif/dhcp_state.o
+Compiling .pioenvs/wake-word-test3/lwip/port/esp32/netif/wlanif.o
+Compiling .pioenvs/wake-word-test3/lwip/port/esp32/netif/ethernetif.o
+Compiling .pioenvs/wake-word-test3/lwip/port/esp32/vfs_lwip.o
+Compiling .pioenvs/wake-word-test3/lwip/apps/ping/esp_ping.o
+Compiling .pioenvs/wake-word-test3/lwip/apps/ping/ping.o
+Compiling .pioenvs/wake-word-test3/lwip/apps/ping/ping_sock.o
+Compiling .pioenvs/wake-word-test3/lwip/apps/dhcpserver/dhcpserver.o
+Compiling .pioenvs/wake-word-test3/mbedtls/esp_crt_bundle/esp_crt_bundle.o
+Compiling .pioenvs/wake-word-test3/.pioenvs/wake-word-test3/x509_crt_bundle.o
+Archiving .pioenvs/wake-word-test3/esp-idf/lwip/liblwip.a
+Archiving .pioenvs/wake-word-test3/esp-idf/mbedtls/libmbedtls.a
+Compiling .pioenvs/wake-word-test3/mdns/mdns.o
+Compiling .pioenvs/wake-word-test3/mdns/mdns_networking_lwip.o
+Compiling .pioenvs/wake-word-test3/mdns/mdns_console.o
+Compiling .pioenvs/wake-word-test3/mqtt/esp-mqtt/mqtt_client.o
+Compiling .pioenvs/wake-word-test3/mqtt/esp-mqtt/lib/mqtt_msg.o
+Compiling .pioenvs/wake-word-test3/mqtt/esp-mqtt/lib/mqtt_outbox.o
+Archiving .pioenvs/wake-word-test3/esp-idf/mdns/libmdns.a
+Compiling .pioenvs/wake-word-test3/mqtt/esp-mqtt/lib/platform_esp32_idf.o
+Compiling .pioenvs/wake-word-test3/newlib/abort.o
+Archiving .pioenvs/wake-word-test3/esp-idf/mqtt/libmqtt.a
+Compiling .pioenvs/wake-word-test3/newlib/assert.o
+Compiling .pioenvs/wake-word-test3/newlib/heap.o
+Compiling .pioenvs/wake-word-test3/newlib/locks.o
+Compiling .pioenvs/wake-word-test3/newlib/poll.o
+Compiling .pioenvs/wake-word-test3/newlib/pthread.o
+Compiling .pioenvs/wake-word-test3/newlib/random.o
+Compiling .pioenvs/wake-word-test3/newlib/reent_init.o
+Compiling .pioenvs/wake-word-test3/newlib/newlib_init.o
+Compiling .pioenvs/wake-word-test3/newlib/syscalls.o
+Compiling .pioenvs/wake-word-test3/newlib/termios.o
+Compiling .pioenvs/wake-word-test3/newlib/stdatomic.o
+Compiling .pioenvs/wake-word-test3/newlib/time.o
+Compiling .pioenvs/wake-word-test3/newlib/sysconf.o
+Compiling .pioenvs/wake-word-test3/newlib/realpath.o
+Compiling .pioenvs/wake-word-test3/newlib/port/esp_time_impl.o
+Compiling .pioenvs/wake-word-test3/nghttp/nghttp2/lib/nghttp2_buf.o
+Archiving .pioenvs/wake-word-test3/esp-idf/newlib/libnewlib.a
+Compiling .pioenvs/wake-word-test3/nghttp/nghttp2/lib/nghttp2_callbacks.o
+Compiling .pioenvs/wake-word-test3/nghttp/nghttp2/lib/nghttp2_debug.o
+Compiling .pioenvs/wake-word-test3/nghttp/nghttp2/lib/nghttp2_frame.o
+Compiling .pioenvs/wake-word-test3/nghttp/nghttp2/lib/nghttp2_hd.o
+Compiling .pioenvs/wake-word-test3/nghttp/nghttp2/lib/nghttp2_hd_huffman.o
+Compiling .pioenvs/wake-word-test3/nghttp/nghttp2/lib/nghttp2_hd_huffman_data.o
+Compiling .pioenvs/wake-word-test3/nghttp/nghttp2/lib/nghttp2_helper.o
+Compiling .pioenvs/wake-word-test3/nghttp/nghttp2/lib/nghttp2_http.o
+Compiling .pioenvs/wake-word-test3/nghttp/nghttp2/lib/nghttp2_map.o
+Compiling .pioenvs/wake-word-test3/nghttp/nghttp2/lib/nghttp2_mem.o
+Compiling .pioenvs/wake-word-test3/nghttp/nghttp2/lib/nghttp2_npn.o
+Compiling .pioenvs/wake-word-test3/nghttp/nghttp2/lib/nghttp2_option.o
+Compiling .pioenvs/wake-word-test3/nghttp/nghttp2/lib/nghttp2_outbound_item.o
+Compiling .pioenvs/wake-word-test3/nghttp/nghttp2/lib/nghttp2_pq.o
+Compiling .pioenvs/wake-word-test3/nghttp/nghttp2/lib/nghttp2_priority_spec.o
+Compiling .pioenvs/wake-word-test3/nghttp/nghttp2/lib/nghttp2_queue.o
+Compiling .pioenvs/wake-word-test3/nghttp/nghttp2/lib/nghttp2_rcbuf.o
+Compiling .pioenvs/wake-word-test3/nghttp/nghttp2/lib/nghttp2_session.o
+Compiling .pioenvs/wake-word-test3/nghttp/nghttp2/lib/nghttp2_stream.o
+Compiling .pioenvs/wake-word-test3/nghttp/nghttp2/lib/nghttp2_submit.o
+Compiling .pioenvs/wake-word-test3/nghttp/nghttp2/lib/nghttp2_version.o
+Compiling .pioenvs/wake-word-test3/nghttp/port/http_parser.o
+Compiling .pioenvs/wake-word-test3/nvs_flash/src/nvs_api.o
+Archiving .pioenvs/wake-word-test3/esp-idf/nghttp/libnghttp.a
+Compiling .pioenvs/wake-word-test3/nvs_flash/src/nvs_cxx_api.o
+Compiling .pioenvs/wake-word-test3/nvs_flash/src/nvs_item_hash_list.o
+Compiling .pioenvs/wake-word-test3/nvs_flash/src/nvs_page.o
+Compiling .pioenvs/wake-word-test3/nvs_flash/src/nvs_pagemanager.o
+Compiling .pioenvs/wake-word-test3/nvs_flash/src/nvs_storage.o
+Compiling .pioenvs/wake-word-test3/nvs_flash/src/nvs_handle_simple.o
+Compiling .pioenvs/wake-word-test3/nvs_flash/src/nvs_handle_locked.o
+Compiling .pioenvs/wake-word-test3/nvs_flash/src/nvs_partition.o
+Compiling .pioenvs/wake-word-test3/nvs_flash/src/nvs_partition_lookup.o
+Compiling .pioenvs/wake-word-test3/nvs_flash/src/nvs_partition_manager.o
+Compiling .pioenvs/wake-word-test3/nvs_flash/src/nvs_types.o
+Compiling .pioenvs/wake-word-test3/openssl/library/ssl_cert.o
+Compiling .pioenvs/wake-word-test3/openssl/library/ssl_lib.o
+Archiving .pioenvs/wake-word-test3/esp-idf/nvs_flash/libnvs_flash.a
+Compiling .pioenvs/wake-word-test3/openssl/library/ssl_methods.o
+Compiling .pioenvs/wake-word-test3/openssl/library/ssl_pkey.o
+Compiling .pioenvs/wake-word-test3/openssl/library/ssl_bio.o
+Compiling .pioenvs/wake-word-test3/openssl/library/ssl_err.o
+Compiling .pioenvs/wake-word-test3/openssl/library/ssl_stack.o
+Compiling .pioenvs/wake-word-test3/openssl/library/ssl_x509.o
+Compiling .pioenvs/wake-word-test3/openssl/platform/ssl_pm.o
+Compiling .pioenvs/wake-word-test3/openssl/platform/ssl_port.o
+Compiling .pioenvs/wake-word-test3/perfmon/xtensa_perfmon_access.o
+Compiling .pioenvs/wake-word-test3/perfmon/xtensa_perfmon_apis.o
+Archiving .pioenvs/wake-word-test3/esp-idf/openssl/libopenssl.a
+Compiling .pioenvs/wake-word-test3/perfmon/xtensa_perfmon_masks.o
+Compiling .pioenvs/wake-word-test3/protobuf-c/protobuf-c/protobuf-c/protobuf-c.o
+Archiving .pioenvs/wake-word-test3/esp-idf/perfmon/libperfmon.a
+Compiling .pioenvs/wake-word-test3/protocomm/src/common/protocomm.o
+Compiling .pioenvs/wake-word-test3/protocomm/src/security/security0.o
+Compiling .pioenvs/wake-word-test3/protocomm/src/security/security1.o
+Compiling .pioenvs/wake-word-test3/protocomm/proto-c/constants.pb-c.o
+Compiling .pioenvs/wake-word-test3/protocomm/proto-c/sec0.pb-c.o
+Compiling .pioenvs/wake-word-test3/protocomm/proto-c/sec1.pb-c.o
+Compiling .pioenvs/wake-word-test3/protocomm/proto-c/session.pb-c.o
+Archiving .pioenvs/wake-word-test3/esp-idf/protobuf-c/libprotobuf-c.a
+Compiling .pioenvs/wake-word-test3/protocomm/src/transports/protocomm_console.o
+Compiling .pioenvs/wake-word-test3/protocomm/src/transports/protocomm_httpd.o
+Compiling .pioenvs/wake-word-test3/pthread/pthread.o
+Archiving .pioenvs/wake-word-test3/esp-idf/protocomm/libprotocomm.a
+Compiling .pioenvs/wake-word-test3/pthread/pthread_cond_var.o
+Compiling .pioenvs/wake-word-test3/pthread/pthread_local_storage.o
+Compiling .pioenvs/wake-word-test3/pthread/pthread_rwlock.o
+Compiling .pioenvs/wake-word-test3/sdmmc/sdmmc_cmd.o
+Archiving .pioenvs/wake-word-test3/esp-idf/pthread/libpthread.a
+Compiling .pioenvs/wake-word-test3/sdmmc/sdmmc_common.o
+Compiling .pioenvs/wake-word-test3/sdmmc/sdmmc_init.o
+Compiling .pioenvs/wake-word-test3/sdmmc/sdmmc_io.o
+Compiling .pioenvs/wake-word-test3/sdmmc/sdmmc_mmc.o
+Compiling .pioenvs/wake-word-test3/sdmmc/sdmmc_sd.o
+Compiling .pioenvs/wake-word-test3/soc/lldesc.o
+Compiling .pioenvs/wake-word-test3/soc/soc_include_legacy_warn.o
+Compiling .pioenvs/wake-word-test3/soc/esp32s3/adc_periph.o
+Compiling .pioenvs/wake-word-test3/soc/esp32s3/dedic_gpio_periph.o
+Archiving .pioenvs/wake-word-test3/esp-idf/sdmmc/libsdmmc.a
+Compiling .pioenvs/wake-word-test3/soc/esp32s3/gdma_periph.o
+Compiling .pioenvs/wake-word-test3/soc/esp32s3/gpio_periph.o
+Compiling .pioenvs/wake-word-test3/soc/esp32s3/i2c_periph.o
+Compiling .pioenvs/wake-word-test3/soc/esp32s3/i2s_periph.o
+Compiling .pioenvs/wake-word-test3/soc/esp32s3/interrupts.o
+Compiling .pioenvs/wake-word-test3/soc/esp32s3/lcd_periph.o
+Compiling .pioenvs/wake-word-test3/soc/esp32s3/ledc_periph.o
+Compiling .pioenvs/wake-word-test3/soc/esp32s3/mcpwm_periph.o
+Compiling .pioenvs/wake-word-test3/soc/esp32s3/pcnt_periph.o
+Compiling .pioenvs/wake-word-test3/soc/esp32s3/rmt_periph.o
+Compiling .pioenvs/wake-word-test3/soc/esp32s3/rtc_io_periph.o
+Compiling .pioenvs/wake-word-test3/soc/esp32s3/sdio_slave_periph.o
+Compiling .pioenvs/wake-word-test3/soc/esp32s3/sdmmc_periph.o
+Compiling .pioenvs/wake-word-test3/soc/esp32s3/sigmadelta_periph.o
+Compiling .pioenvs/wake-word-test3/soc/esp32s3/spi_periph.o
+Compiling .pioenvs/wake-word-test3/soc/esp32s3/timer_periph.o
+Compiling .pioenvs/wake-word-test3/soc/esp32s3/touch_sensor_periph.o
+Compiling .pioenvs/wake-word-test3/soc/esp32s3/uart_periph.o
+Compiling .pioenvs/wake-word-test3/soc/esp32s3/usb_periph.o
+Compiling .pioenvs/wake-word-test3/soc/esp32s3/usb_phy_periph.o
+Compiling .pioenvs/wake-word-test3/spi_flash/partition.o
+Archiving .pioenvs/wake-word-test3/esp-idf/soc/libsoc.a
+Compiling .pioenvs/wake-word-test3/spi_flash/esp32s3/spi_flash_rom_patch.o
+Compiling .pioenvs/wake-word-test3/spi_flash/esp32s3/spi_timing_config.o
+Compiling .pioenvs/wake-word-test3/spi_flash/spi_flash_timing_tuning.o
+Compiling .pioenvs/wake-word-test3/spi_flash/spi_flash_hpm_enable.o
+Compiling .pioenvs/wake-word-test3/spi_flash/spi_flash_chip_drivers.o
+Compiling .pioenvs/wake-word-test3/spi_flash/spi_flash_chip_generic.o
+Compiling .pioenvs/wake-word-test3/spi_flash/spi_flash_chip_issi.o
+Compiling .pioenvs/wake-word-test3/spi_flash/spi_flash_chip_mxic.o
+Compiling .pioenvs/wake-word-test3/spi_flash/spi_flash_chip_gd.o
+Compiling .pioenvs/wake-word-test3/spi_flash/spi_flash_chip_winbond.o
+Compiling .pioenvs/wake-word-test3/spi_flash/spi_flash_chip_boya.o
+Compiling .pioenvs/wake-word-test3/spi_flash/spi_flash_chip_mxic_opi.o
+Compiling .pioenvs/wake-word-test3/spi_flash/spi_flash_chip_th.o
+Compiling .pioenvs/wake-word-test3/spi_flash/memspi_host_driver.o
+Compiling .pioenvs/wake-word-test3/spi_flash/cache_utils.o
+Compiling .pioenvs/wake-word-test3/spi_flash/flash_mmap.o
+Compiling .pioenvs/wake-word-test3/spi_flash/flash_ops.o
+Compiling .pioenvs/wake-word-test3/spi_flash/esp32s3/flash_ops_esp32s3.o
+Compiling .pioenvs/wake-word-test3/spi_flash/esp_flash_api.o
+Compiling .pioenvs/wake-word-test3/spi_flash/esp_flash_spi_init.o
+Compiling .pioenvs/wake-word-test3/spi_flash/spi_flash_os_func_app.o
+Compiling .pioenvs/wake-word-test3/spi_flash/spi_flash_os_func_noos.o
+Compiling .pioenvs/wake-word-test3/spiffs/esp_spiffs.o
+Archiving .pioenvs/wake-word-test3/esp-idf/spi_flash/libspi_flash.a
+Compiling .pioenvs/wake-word-test3/spiffs/spiffs_api.o
+Compiling .pioenvs/wake-word-test3/spiffs/spiffs/src/spiffs_cache.o
+Compiling .pioenvs/wake-word-test3/spiffs/spiffs/src/spiffs_check.o
+Compiling .pioenvs/wake-word-test3/spiffs/spiffs/src/spiffs_gc.o
+Compiling .pioenvs/wake-word-test3/spiffs/spiffs/src/spiffs_hydrogen.o
+Compiling .pioenvs/wake-word-test3/spiffs/spiffs/src/spiffs_nucleus.o
+Compiling .pioenvs/wake-word-test3/tcp_transport/transport.o
+Compiling .pioenvs/wake-word-test3/tcp_transport/transport_ssl.o
+Archiving .pioenvs/wake-word-test3/esp-idf/spiffs/libspiffs.a
+Compiling .pioenvs/wake-word-test3/tcp_transport/transport_internal.o
+Compiling .pioenvs/wake-word-test3/tcp_transport/transport_ws.o
+Compiling .pioenvs/wake-word-test3/tcpip_adapter/tcpip_adapter_compat.o
+Archiving .pioenvs/wake-word-test3/esp-idf/tcpip_adapter/libtcpip_adapter.a
+Compiling .pioenvs/wake-word-test3/ulp/ulp.o
+Archiving .pioenvs/wake-word-test3/esp-idf/tcp_transport/libtcp_transport.a
+Compiling .pioenvs/wake-word-test3/ulp/ulp_macro.o
+Compiling .pioenvs/wake-word-test3/unity/unity/src/unity.o
+Archiving .pioenvs/wake-word-test3/esp-idf/ulp/libulp.a
+Compiling .pioenvs/wake-word-test3/unity/unity_runner.o
+Compiling .pioenvs/wake-word-test3/unity/unity_port_esp32.o
+Compiling .pioenvs/wake-word-test3/usb/hcd_dwc.o
+Archiving .pioenvs/wake-word-test3/esp-idf/unity/libunity.a
+Compiling .pioenvs/wake-word-test3/usb/hub.o
+Compiling .pioenvs/wake-word-test3/usb/usb_helpers.o
+Compiling .pioenvs/wake-word-test3/usb/usb_host.o
+Compiling .pioenvs/wake-word-test3/usb/usb_private.o
+Compiling .pioenvs/wake-word-test3/usb/usbh.o
+Compiling .pioenvs/wake-word-test3/usb/usb_phy.o
+Compiling .pioenvs/wake-word-test3/vfs/vfs.o
+Archiving .pioenvs/wake-word-test3/esp-idf/usb/libusb.a
+Compiling .pioenvs/wake-word-test3/vfs/vfs_eventfd.o
+Compiling .pioenvs/wake-word-test3/vfs/vfs_uart.o
+Compiling .pioenvs/wake-word-test3/vfs/vfs_semihost.o
+Compiling .pioenvs/wake-word-test3/vfs/vfs_console.o
+Compiling .pioenvs/wake-word-test3/vfs/vfs_usb_serial_jtag.o
+Compiling .pioenvs/wake-word-test3/wear_levelling/Partition.o
+Compiling .pioenvs/wake-word-test3/wear_levelling/SPI_Flash.o
+Archiving .pioenvs/wake-word-test3/esp-idf/vfs/libvfs.a
+Compiling .pioenvs/wake-word-test3/wear_levelling/WL_Ext_Perf.o
+Compiling .pioenvs/wake-word-test3/wear_levelling/WL_Ext_Safe.o
+Compiling .pioenvs/wake-word-test3/wear_levelling/WL_Flash.o
+Compiling .pioenvs/wake-word-test3/wear_levelling/crc32.o
+Compiling .pioenvs/wake-word-test3/wear_levelling/wear_levelling.o
+Compiling .pioenvs/wake-word-test3/wifi_provisioning/src/wifi_config.o
+Archiving .pioenvs/wake-word-test3/esp-idf/wear_levelling/libwear_levelling.a
+Compiling .pioenvs/wake-word-test3/wifi_provisioning/src/wifi_scan.o
+Compiling .pioenvs/wake-word-test3/wifi_provisioning/src/manager.o
+Compiling .pioenvs/wake-word-test3/wifi_provisioning/src/handlers.o
+Compiling .pioenvs/wake-word-test3/wifi_provisioning/src/scheme_console.o
+Compiling .pioenvs/wake-word-test3/wifi_provisioning/proto-c/wifi_config.pb-c.o
+Compiling .pioenvs/wake-word-test3/wifi_provisioning/proto-c/wifi_scan.pb-c.o
+Compiling .pioenvs/wake-word-test3/wifi_provisioning/proto-c/wifi_constants.pb-c.o
+Compiling .pioenvs/wake-word-test3/wifi_provisioning/src/scheme_softap.o
+Compiling .pioenvs/wake-word-test3/wpa_supplicant/port/os_xtensa.o
+Archiving .pioenvs/wake-word-test3/esp-idf/wifi_provisioning/libwifi_provisioning.a
+Compiling .pioenvs/wake-word-test3/wpa_supplicant/src/ap/ap_config.o
+Compiling .pioenvs/wake-word-test3/wpa_supplicant/src/ap/ieee802_1x.o
+Compiling .pioenvs/wake-word-test3/wpa_supplicant/src/ap/wpa_auth.o
+Compiling .pioenvs/wake-word-test3/wpa_supplicant/src/ap/wpa_auth_ie.o
+Compiling .pioenvs/wake-word-test3/wpa_supplicant/src/common/sae.o
+Compiling .pioenvs/wake-word-test3/wpa_supplicant/src/common/dragonfly.o
+Compiling .pioenvs/wake-word-test3/wpa_supplicant/src/common/wpa_common.o
+Compiling .pioenvs/wake-word-test3/wpa_supplicant/src/utils/bitfield.o
+Compiling .pioenvs/wake-word-test3/wpa_supplicant/src/crypto/aes-siv.o
+Compiling .pioenvs/wake-word-test3/wpa_supplicant/src/crypto/sha256-kdf.o
+Compiling .pioenvs/wake-word-test3/wpa_supplicant/src/crypto/ccmp.o
+Compiling .pioenvs/wake-word-test3/wpa_supplicant/src/crypto/aes-gcm.o
+Compiling .pioenvs/wake-word-test3/wpa_supplicant/src/crypto/crypto_ops.o
+Compiling .pioenvs/wake-word-test3/wpa_supplicant/src/crypto/dh_group5.o
+Compiling .pioenvs/wake-word-test3/wpa_supplicant/src/crypto/dh_groups.o
+Compiling .pioenvs/wake-word-test3/wpa_supplicant/src/crypto/ms_funcs.o
+Compiling .pioenvs/wake-word-test3/wpa_supplicant/src/crypto/sha1-tlsprf.o
+Compiling .pioenvs/wake-word-test3/wpa_supplicant/src/crypto/sha256-tlsprf.o
+Compiling .pioenvs/wake-word-test3/wpa_supplicant/src/crypto/sha384-tlsprf.o
+Compiling .pioenvs/wake-word-test3/wpa_supplicant/src/crypto/sha256-prf.o
+Compiling .pioenvs/wake-word-test3/wpa_supplicant/src/crypto/sha1-prf.o
+Compiling .pioenvs/wake-word-test3/wpa_supplicant/src/crypto/sha384-prf.o
+Compiling .pioenvs/wake-word-test3/wpa_supplicant/src/crypto/md4-internal.o
+Compiling .pioenvs/wake-word-test3/wpa_supplicant/src/eap_peer/chap.o
+Compiling .pioenvs/wake-word-test3/wpa_supplicant/src/eap_peer/eap.o
+Compiling .pioenvs/wake-word-test3/wpa_supplicant/src/eap_peer/eap_common.o
+Compiling .pioenvs/wake-word-test3/wpa_supplicant/src/eap_peer/eap_mschapv2.o
+Compiling .pioenvs/wake-word-test3/wpa_supplicant/src/eap_peer/eap_peap.o
+Compiling .pioenvs/wake-word-test3/wpa_supplicant/src/eap_peer/eap_peap_common.o
+Compiling .pioenvs/wake-word-test3/wpa_supplicant/src/eap_peer/eap_tls.o
+Compiling .pioenvs/wake-word-test3/wpa_supplicant/src/eap_peer/eap_tls_common.o
+Compiling .pioenvs/wake-word-test3/wpa_supplicant/src/eap_peer/eap_ttls.o
+Compiling .pioenvs/wake-word-test3/wpa_supplicant/src/eap_peer/mschapv2.o
+Compiling .pioenvs/wake-word-test3/wpa_supplicant/src/eap_peer/eap_fast.o
+Compiling .pioenvs/wake-word-test3/wpa_supplicant/src/eap_peer/eap_fast_common.o
+Compiling .pioenvs/wake-word-test3/wpa_supplicant/src/eap_peer/eap_fast_pac.o
+Compiling .pioenvs/wake-word-test3/wpa_supplicant/src/rsn_supp/pmksa_cache.o
+Compiling .pioenvs/wake-word-test3/wpa_supplicant/src/rsn_supp/wpa.o
+Compiling .pioenvs/wake-word-test3/wpa_supplicant/src/rsn_supp/wpa_ie.o
+Compiling .pioenvs/wake-word-test3/wpa_supplicant/src/utils/base64.o
+Compiling .pioenvs/wake-word-test3/wpa_supplicant/src/utils/common.o
+Compiling .pioenvs/wake-word-test3/wpa_supplicant/src/utils/ext_password.o
+Compiling .pioenvs/wake-word-test3/wpa_supplicant/src/utils/uuid.o
+Compiling .pioenvs/wake-word-test3/wpa_supplicant/src/utils/wpabuf.o
+Compiling .pioenvs/wake-word-test3/wpa_supplicant/src/utils/wpa_debug.o
+Compiling .pioenvs/wake-word-test3/wpa_supplicant/src/utils/json.o
+Compiling .pioenvs/wake-word-test3/wpa_supplicant/src/wps/wps.o
+Compiling .pioenvs/wake-word-test3/wpa_supplicant/src/wps/wps_attr_build.o
+Compiling .pioenvs/wake-word-test3/wpa_supplicant/src/wps/wps_attr_parse.o
+Compiling .pioenvs/wake-word-test3/wpa_supplicant/src/wps/wps_attr_process.o
+Compiling .pioenvs/wake-word-test3/wpa_supplicant/src/wps/wps_common.o
+Compiling .pioenvs/wake-word-test3/wpa_supplicant/src/wps/wps_dev_attr.o
+Compiling .pioenvs/wake-word-test3/wpa_supplicant/src/wps/wps_enrollee.o
+Compiling .pioenvs/wake-word-test3/wpa_supplicant/src/wps/wps_registrar.o
+Compiling .pioenvs/wake-word-test3/wpa_supplicant/src/wps/wps_validate.o
+Compiling .pioenvs/wake-word-test3/wpa_supplicant/esp_supplicant/src/esp_common.o
+Compiling .pioenvs/wake-word-test3/wpa_supplicant/esp_supplicant/src/esp_wpa2.o
+Compiling .pioenvs/wake-word-test3/wpa_supplicant/esp_supplicant/src/esp_wpa_main.o
+Compiling .pioenvs/wake-word-test3/wpa_supplicant/esp_supplicant/src/esp_wpas_glue.o
+Compiling .pioenvs/wake-word-test3/wpa_supplicant/esp_supplicant/src/esp_wps.o
+Compiling .pioenvs/wake-word-test3/wpa_supplicant/esp_supplicant/src/esp_wpa3.o
+Compiling .pioenvs/wake-word-test3/wpa_supplicant/esp_supplicant/src/esp_hostap.o
+Compiling .pioenvs/wake-word-test3/wpa_supplicant/src/crypto/tls_mbedtls.o
+Compiling .pioenvs/wake-word-test3/wpa_supplicant/src/crypto/crypto_mbedtls.o
+Compiling .pioenvs/wake-word-test3/wpa_supplicant/src/crypto/crypto_mbedtls-bignum.o
+Compiling .pioenvs/wake-word-test3/wpa_supplicant/src/crypto/crypto_mbedtls-ec.o
+Compiling .pioenvs/wake-word-test3/wpa_supplicant/src/crypto/rc4.o
+Compiling .pioenvs/wake-word-test3/wpa_supplicant/src/crypto/des-internal.o
+Compiling .pioenvs/wake-word-test3/wpa_supplicant/src/crypto/aes-omac1.o
+Compiling .pioenvs/wake-word-test3/wpa_supplicant/src/crypto/aes-wrap.o
+Compiling .pioenvs/wake-word-test3/wpa_supplicant/src/crypto/aes-unwrap.o
+Compiling .pioenvs/wake-word-test3/wpa_supplicant/src/crypto/aes-ccm.o
+Compiling .pioenvs/wake-word-test3/xtensa/eri.o
+Compiling .pioenvs/wake-word-test3/xtensa/xt_trax.o
+Archiving .pioenvs/wake-word-test3/esp-idf/wpa_supplicant/libwpa_supplicant.a
+Compiling .pioenvs/wake-word-test3/xtensa/xtensa_intr.o
+Compiling .pioenvs/wake-word-test3/xtensa/xtensa_intr_asm.o
+Compiling .pioenvs/wake-word-test3/mbedtls/mbedtls/library/aes.o
+Archiving .pioenvs/wake-word-test3/esp-idf/xtensa/libxtensa.a
+Compiling .pioenvs/wake-word-test3/mbedtls/mbedtls/library/aesni.o
+Compiling .pioenvs/wake-word-test3/mbedtls/mbedtls/library/arc4.o
+Compiling .pioenvs/wake-word-test3/mbedtls/mbedtls/library/aria.o
+Compiling .pioenvs/wake-word-test3/mbedtls/mbedtls/library/asn1parse.o
+Compiling .pioenvs/wake-word-test3/mbedtls/mbedtls/library/asn1write.o
+Compiling .pioenvs/wake-word-test3/mbedtls/mbedtls/library/base64.o
+Compiling .pioenvs/wake-word-test3/mbedtls/mbedtls/library/bignum.o
+Compiling .pioenvs/wake-word-test3/mbedtls/mbedtls/library/blowfish.o
+Compiling .pioenvs/wake-word-test3/mbedtls/mbedtls/library/camellia.o
+Compiling .pioenvs/wake-word-test3/mbedtls/mbedtls/library/ccm.o
+Compiling .pioenvs/wake-word-test3/mbedtls/mbedtls/library/chacha20.o
+Compiling .pioenvs/wake-word-test3/mbedtls/mbedtls/library/chachapoly.o
+Compiling .pioenvs/wake-word-test3/mbedtls/mbedtls/library/cipher.o
+Compiling .pioenvs/wake-word-test3/mbedtls/mbedtls/library/cipher_wrap.o
+Compiling .pioenvs/wake-word-test3/mbedtls/mbedtls/library/constant_time.o
+Compiling .pioenvs/wake-word-test3/mbedtls/mbedtls/library/cmac.o
+Compiling .pioenvs/wake-word-test3/mbedtls/mbedtls/library/ctr_drbg.o
+Compiling .pioenvs/wake-word-test3/mbedtls/mbedtls/library/des.o
+Compiling .pioenvs/wake-word-test3/mbedtls/mbedtls/library/dhm.o
+Compiling .pioenvs/wake-word-test3/mbedtls/mbedtls/library/ecdh.o
+Compiling .pioenvs/wake-word-test3/mbedtls/mbedtls/library/ecdsa.o
+Compiling .pioenvs/wake-word-test3/mbedtls/mbedtls/library/ecjpake.o
+Compiling .pioenvs/wake-word-test3/mbedtls/mbedtls/library/ecp.o
+Compiling .pioenvs/wake-word-test3/mbedtls/mbedtls/library/ecp_curves.o
+Compiling .pioenvs/wake-word-test3/mbedtls/mbedtls/library/entropy.o
+Compiling .pioenvs/wake-word-test3/mbedtls/mbedtls/library/entropy_poll.o
+Compiling .pioenvs/wake-word-test3/mbedtls/mbedtls/library/error.o
+Compiling .pioenvs/wake-word-test3/mbedtls/mbedtls/library/gcm.o
+Compiling .pioenvs/wake-word-test3/mbedtls/mbedtls/library/havege.o
+Compiling .pioenvs/wake-word-test3/mbedtls/mbedtls/library/hkdf.o
+Compiling .pioenvs/wake-word-test3/mbedtls/mbedtls/library/hmac_drbg.o
+Compiling .pioenvs/wake-word-test3/mbedtls/mbedtls/library/md.o
+Compiling .pioenvs/wake-word-test3/mbedtls/mbedtls/library/md2.o
+Compiling .pioenvs/wake-word-test3/mbedtls/mbedtls/library/md4.o
+Compiling .pioenvs/wake-word-test3/mbedtls/mbedtls/library/md5.o
+Compiling .pioenvs/wake-word-test3/mbedtls/mbedtls/library/memory_buffer_alloc.o
+Compiling .pioenvs/wake-word-test3/mbedtls/mbedtls/library/mps_reader.o
+Compiling .pioenvs/wake-word-test3/mbedtls/mbedtls/library/mps_trace.o
+Compiling .pioenvs/wake-word-test3/mbedtls/mbedtls/library/nist_kw.o
+Compiling .pioenvs/wake-word-test3/mbedtls/mbedtls/library/oid.o
+Compiling .pioenvs/wake-word-test3/mbedtls/mbedtls/library/padlock.o
+Compiling .pioenvs/wake-word-test3/mbedtls/mbedtls/library/pem.o
+Compiling .pioenvs/wake-word-test3/mbedtls/mbedtls/library/pk.o
+Compiling .pioenvs/wake-word-test3/mbedtls/mbedtls/library/pk_wrap.o
+Compiling .pioenvs/wake-word-test3/mbedtls/mbedtls/library/pkcs12.o
+Compiling .pioenvs/wake-word-test3/mbedtls/mbedtls/library/pkcs5.o
+Compiling .pioenvs/wake-word-test3/mbedtls/mbedtls/library/pkparse.o
+Compiling .pioenvs/wake-word-test3/mbedtls/mbedtls/library/pkwrite.o
+Compiling .pioenvs/wake-word-test3/mbedtls/mbedtls/library/platform.o
+Compiling .pioenvs/wake-word-test3/mbedtls/mbedtls/library/platform_util.o
+Compiling .pioenvs/wake-word-test3/mbedtls/mbedtls/library/poly1305.o
+Compiling .pioenvs/wake-word-test3/mbedtls/mbedtls/library/psa_crypto.o
+Compiling .pioenvs/wake-word-test3/mbedtls/mbedtls/library/psa_crypto_aead.o
+Compiling .pioenvs/wake-word-test3/mbedtls/mbedtls/library/psa_crypto_cipher.o
+Compiling .pioenvs/wake-word-test3/mbedtls/mbedtls/library/psa_crypto_client.o
+Compiling .pioenvs/wake-word-test3/mbedtls/mbedtls/library/psa_crypto_driver_wrappers.o
+Compiling .pioenvs/wake-word-test3/mbedtls/mbedtls/library/psa_crypto_ecp.o
+Compiling .pioenvs/wake-word-test3/mbedtls/mbedtls/library/psa_crypto_hash.o
+Compiling .pioenvs/wake-word-test3/mbedtls/mbedtls/library/psa_crypto_mac.o
+Compiling .pioenvs/wake-word-test3/mbedtls/mbedtls/library/psa_crypto_rsa.o
+Compiling .pioenvs/wake-word-test3/mbedtls/mbedtls/library/psa_crypto_se.o
+Compiling .pioenvs/wake-word-test3/mbedtls/mbedtls/library/psa_crypto_slot_management.o
+Compiling .pioenvs/wake-word-test3/mbedtls/mbedtls/library/psa_crypto_storage.o
+Compiling .pioenvs/wake-word-test3/mbedtls/mbedtls/library/psa_its_file.o
+Compiling .pioenvs/wake-word-test3/mbedtls/mbedtls/library/ripemd160.o
+Compiling .pioenvs/wake-word-test3/mbedtls/mbedtls/library/rsa.o
+Compiling .pioenvs/wake-word-test3/mbedtls/mbedtls/library/rsa_internal.o
+Compiling .pioenvs/wake-word-test3/mbedtls/mbedtls/library/sha1.o
+Compiling .pioenvs/wake-word-test3/mbedtls/mbedtls/library/sha256.o
+Compiling .pioenvs/wake-word-test3/mbedtls/mbedtls/library/sha512.o
+Compiling .pioenvs/wake-word-test3/mbedtls/mbedtls/library/threading.o
+Compiling .pioenvs/wake-word-test3/mbedtls/mbedtls/library/timing.o
+Compiling .pioenvs/wake-word-test3/mbedtls/mbedtls/library/version.o
+Compiling .pioenvs/wake-word-test3/mbedtls/mbedtls/library/version_features.o
+Compiling .pioenvs/wake-word-test3/mbedtls/mbedtls/library/xtea.o
+Compiling .pioenvs/wake-word-test3/mbedtls/port/sha/dma/esp_sha_gdma_impl.o
+Compiling .pioenvs/wake-word-test3/mbedtls/port/crypto_shared_gdma/esp_crypto_shared_gdma.o
+Compiling .pioenvs/wake-word-test3/mbedtls/port/aes/dma/esp_aes_gdma_impl.o
+Compiling .pioenvs/wake-word-test3/mbedtls/port/esp_hardware.o
+Compiling .pioenvs/wake-word-test3/mbedtls/port/esp_mem.o
+Compiling .pioenvs/wake-word-test3/mbedtls/port/esp_timing.o
+Compiling .pioenvs/wake-word-test3/mbedtls/port/sha/esp_sha.o
+Compiling .pioenvs/wake-word-test3/mbedtls/port/aes/esp_aes_xts.o
+Compiling .pioenvs/wake-word-test3/mbedtls/port/aes/esp_aes_common.o
+Compiling .pioenvs/wake-word-test3/mbedtls/port/aes/dma/esp_aes.o
+Compiling .pioenvs/wake-word-test3/mbedtls/port/sha/dma/sha.o
+Compiling .pioenvs/wake-word-test3/mbedtls/port/esp_ds/esp_rsa_sign_alt.o
+Compiling .pioenvs/wake-word-test3/mbedtls/port/esp_bignum.o
+Compiling .pioenvs/wake-word-test3/mbedtls/port/esp32s3/bignum.o
+Compiling .pioenvs/wake-word-test3/mbedtls/port/sha/dma/esp_sha1.o
+Compiling .pioenvs/wake-word-test3/mbedtls/port/sha/dma/esp_sha256.o
+Compiling .pioenvs/wake-word-test3/mbedtls/port/sha/dma/esp_sha512.o
+Compiling .pioenvs/wake-word-test3/mbedtls/port/md/esp_md.o
+Compiling .pioenvs/wake-word-test3/mbedtls/mbedtls/library/debug.o
+Archiving .pioenvs/wake-word-test3/esp-idf/mbedtls/mbedtls/library/libmbedcrypto.a
+Compiling .pioenvs/wake-word-test3/mbedtls/mbedtls/library/ssl_cache.o
+Compiling .pioenvs/wake-word-test3/mbedtls/mbedtls/library/ssl_ciphersuites.o
+Compiling .pioenvs/wake-word-test3/mbedtls/mbedtls/library/ssl_cli.o
+Compiling .pioenvs/wake-word-test3/mbedtls/mbedtls/library/ssl_cookie.o
+Compiling .pioenvs/wake-word-test3/mbedtls/mbedtls/library/ssl_msg.o
+Compiling .pioenvs/wake-word-test3/mbedtls/mbedtls/library/ssl_srv.o
+Compiling .pioenvs/wake-word-test3/mbedtls/mbedtls/library/ssl_ticket.o
+Compiling .pioenvs/wake-word-test3/mbedtls/mbedtls/library/ssl_tls.o
+Compiling .pioenvs/wake-word-test3/mbedtls/mbedtls/library/ssl_tls13_keys.o
+Compiling .pioenvs/wake-word-test3/mbedtls/port/mbedtls_debug.o
+Compiling .pioenvs/wake-word-test3/mbedtls/port/net_sockets.o
+Compiling .pioenvs/wake-word-test3/mbedtls/mbedtls/library/certs.o
+Compiling .pioenvs/wake-word-test3/mbedtls/mbedtls/library/pkcs11.o
+Compiling .pioenvs/wake-word-test3/mbedtls/mbedtls/library/x509.o
+Archiving .pioenvs/wake-word-test3/esp-idf/mbedtls/mbedtls/library/libmbedtls.a
+Compiling .pioenvs/wake-word-test3/mbedtls/mbedtls/library/x509_create.o
+Compiling .pioenvs/wake-word-test3/mbedtls/mbedtls/library/x509_crl.o
+Compiling .pioenvs/wake-word-test3/mbedtls/mbedtls/library/x509_crt.o
+Compiling .pioenvs/wake-word-test3/mbedtls/mbedtls/library/x509_csr.o
+Compiling .pioenvs/wake-word-test3/mbedtls/mbedtls/library/x509write_crt.o
+Compiling .pioenvs/wake-word-test3/mbedtls/mbedtls/library/x509write_csr.o
+Compiling .pioenvs/wake-word-test3/bootloader/hal/wdt_hal_iram.o
+Compiling .pioenvs/wake-word-test3/bootloader/hal/mpu_hal.o
+Archiving .pioenvs/wake-word-test3/esp-idf/mbedtls/mbedtls/library/libmbedx509.a
+Generating project linker script .pioenvs/wake-word-test3/sections.ld
+Compiling .pioenvs/wake-word-test3/bootloader/hal/cpu_hal.o
+Compiling .pioenvs/wake-word-test3/bootloader/hal/efuse_hal.o
+Compiling .pioenvs/wake-word-test3/bootloader/hal/esp32s3/efuse_hal.o
+Archiving .pioenvs/wake-word-test3/bootloader/esp-idf/hal/libhal.a
+Compiling .pioenvs/wake-word-test3/bootloader/bootloader/subproject/main/bootloader_start.o
+Archiving .pioenvs/wake-word-test3/bootloader/esp-idf/main/libmain.a
+Compiling .pioenvs/wake-word-test3/bootloader/bootloader_support/src/bootloader_common.o
+Compiling .pioenvs/wake-word-test3/bootloader/bootloader_support/src/bootloader_common_loader.o
+Compiling .pioenvs/wake-word-test3/bootloader/bootloader_support/src/bootloader_clock_init.o
+Compiling .pioenvs/wake-word-test3/bootloader/bootloader_support/src/bootloader_flash.o
+Compiling .pioenvs/wake-word-test3/bootloader/bootloader_support/src/bootloader_mem.o
+Compiling .pioenvs/wake-word-test3/bootloader/bootloader_support/src/bootloader_random.o
+Compiling .pioenvs/wake-word-test3/bootloader/bootloader_support/src/bootloader_random_esp32s3.o
+Compiling .pioenvs/wake-word-test3/bootloader/bootloader_support/src/bootloader_utility.o
+Compiling .pioenvs/wake-word-test3/bootloader/bootloader_support/src/esp_image_format.o
+Compiling .pioenvs/wake-word-test3/bootloader/bootloader_support/src/flash_encrypt.o
+Compiling .pioenvs/wake-word-test3/bootloader/bootloader_support/src/secure_boot.o
+Compiling .pioenvs/wake-word-test3/bootloader/bootloader_support/src/flash_partitions.o
+Compiling .pioenvs/wake-word-test3/bootloader/bootloader_support/src/flash_qio_mode.o
+Compiling .pioenvs/wake-word-test3/bootloader/bootloader_support/src/bootloader_flash_config_esp32s3.o
+Compiling .pioenvs/wake-word-test3/bootloader/bootloader_support/src/bootloader_efuse.o
+Compiling .pioenvs/wake-word-test3/bootloader/bootloader_support/src/bootloader_init.o
+Compiling .pioenvs/wake-word-test3/bootloader/bootloader_support/src/bootloader_clock_loader.o
+Compiling .pioenvs/wake-word-test3/bootloader/bootloader_support/src/bootloader_console.o
+Compiling .pioenvs/wake-word-test3/bootloader/bootloader_support/src/bootloader_console_loader.o
+Compiling .pioenvs/wake-word-test3/bootloader/bootloader_support/src/bootloader_panic.o
+Compiling .pioenvs/wake-word-test3/bootloader/bootloader_support/src/esp32s3/bootloader_sha.o
+Compiling .pioenvs/wake-word-test3/bootloader/bootloader_support/src/esp32s3/bootloader_soc.o
+Compiling .pioenvs/wake-word-test3/bootloader/bootloader_support/src/esp32s3/bootloader_esp32s3.o
+Compiling .pioenvs/wake-word-test3/bootloader/efuse/esp32s3/esp_efuse_table.o
+Compiling .pioenvs/wake-word-test3/bootloader/efuse/esp32s3/esp_efuse_fields.o
+Archiving .pioenvs/wake-word-test3/bootloader/esp-idf/bootloader_support/libbootloader_support.a
+Compiling .pioenvs/wake-word-test3/bootloader/efuse/esp32s3/esp_efuse_rtc_calib.o
+Compiling .pioenvs/wake-word-test3/bootloader/efuse/esp32s3/esp_efuse_utility.o
+Compiling .pioenvs/wake-word-test3/bootloader/efuse/src/esp_efuse_api.o
+Compiling .pioenvs/wake-word-test3/bootloader/efuse/src/esp_efuse_fields.o
+Compiling .pioenvs/wake-word-test3/bootloader/efuse/src/esp_efuse_utility.o
+Compiling .pioenvs/wake-word-test3/bootloader/efuse/src/esp_efuse_api_key_esp32xx.o
+Compiling .pioenvs/wake-word-test3/bootloader/esp_common/src/esp_err_to_name.o
+Archiving .pioenvs/wake-word-test3/bootloader/esp-idf/efuse/libefuse.a
+Compiling .pioenvs/wake-word-test3/bootloader/esp_hw_support/compare_set.o
+Archiving .pioenvs/wake-word-test3/bootloader/esp-idf/esp_common/libesp_common.a
+Compiling .pioenvs/wake-word-test3/bootloader/esp_hw_support/cpu_util.o
+Compiling .pioenvs/wake-word-test3/bootloader/esp_hw_support/port/esp32s3/rtc_clk.o
+Compiling .pioenvs/wake-word-test3/bootloader/esp_hw_support/port/esp32s3/rtc_clk_init.o
+Compiling .pioenvs/wake-word-test3/bootloader/esp_hw_support/port/esp32s3/rtc_init.o
+Compiling .pioenvs/wake-word-test3/bootloader/esp_hw_support/port/esp32s3/rtc_pm.o
+Compiling .pioenvs/wake-word-test3/bootloader/esp_hw_support/port/esp32s3/rtc_sleep.o
+Compiling .pioenvs/wake-word-test3/bootloader/esp_hw_support/port/esp32s3/rtc_time.o
+Compiling .pioenvs/wake-word-test3/bootloader/esp_hw_support/port/esp32s3/rtc_wdt.o
+Compiling .pioenvs/wake-word-test3/bootloader/esp_hw_support/port/esp32s3/chip_info.o
+Archiving .pioenvs/wake-word-test3/bootloader/esp-idf/esp_hw_support/libesp_hw_support.a
+Compiling .pioenvs/wake-word-test3/bootloader/esp_rom/patches/esp_rom_crc.o
+Compiling .pioenvs/wake-word-test3/bootloader/esp_rom/patches/esp_rom_sys.o
+Compiling .pioenvs/wake-word-test3/bootloader/esp_rom/patches/esp_rom_uart.o
+Compiling .pioenvs/wake-word-test3/bootloader/esp_rom/patches/esp_rom_tjpgd.o
+Compiling .pioenvs/wake-word-test3/bootloader/esp_rom/patches/esp_rom_efuse.o
+Compiling .pioenvs/wake-word-test3/bootloader/esp_rom/patches/esp_rom_longjmp.o
+Compiling .pioenvs/wake-word-test3/bootloader/esp_rom/patches/esp_rom_cache.o
+Compiling .pioenvs/wake-word-test3/bootloader/esp_rom/patches/esp_rom_cache_writeback_esp32s3.o
+Compiling .pioenvs/wake-word-test3/bootloader/esp_system/esp_err.o
+Archiving .pioenvs/wake-word-test3/bootloader/esp-idf/esp_rom/libesp_rom.a
+Compiling .pioenvs/wake-word-test3/bootloader/log/log.o
+Archiving .pioenvs/wake-word-test3/bootloader/esp-idf/esp_system/libesp_system.a
+Compiling .pioenvs/wake-word-test3/bootloader/log/log_buffers.o
+Compiling .pioenvs/wake-word-test3/bootloader/log/log_noos.o
+Compiling .pioenvs/wake-word-test3/bootloader/bootloader/subproject/components/micro-ecc/uECC_verify_antifault.o
+Archiving .pioenvs/wake-word-test3/bootloader/esp-idf/log/liblog.a
+Compiling .pioenvs/wake-word-test3/bootloader/soc/lldesc.o
+Compiling .pioenvs/wake-word-test3/bootloader/soc/soc_include_legacy_warn.o
+Compiling .pioenvs/wake-word-test3/bootloader/soc/esp32s3/adc_periph.o
+Compiling .pioenvs/wake-word-test3/bootloader/soc/esp32s3/dedic_gpio_periph.o
+Compiling .pioenvs/wake-word-test3/bootloader/soc/esp32s3/gdma_periph.o
+Compiling .pioenvs/wake-word-test3/bootloader/soc/esp32s3/gpio_periph.o
+Compiling .pioenvs/wake-word-test3/bootloader/soc/esp32s3/i2c_periph.o
+Compiling .pioenvs/wake-word-test3/bootloader/soc/esp32s3/i2s_periph.o
+Compiling .pioenvs/wake-word-test3/bootloader/soc/esp32s3/interrupts.o
+Compiling .pioenvs/wake-word-test3/bootloader/soc/esp32s3/lcd_periph.o
+Compiling .pioenvs/wake-word-test3/bootloader/soc/esp32s3/ledc_periph.o
+Compiling .pioenvs/wake-word-test3/bootloader/soc/esp32s3/mcpwm_periph.o
+Compiling .pioenvs/wake-word-test3/bootloader/soc/esp32s3/pcnt_periph.o
+Compiling .pioenvs/wake-word-test3/bootloader/soc/esp32s3/rmt_periph.o
+Archiving .pioenvs/wake-word-test3/bootloader/esp-idf/micro-ecc/libmicro-ecc.a
+Compiling .pioenvs/wake-word-test3/bootloader/soc/esp32s3/rtc_io_periph.o
+Compiling .pioenvs/wake-word-test3/bootloader/soc/esp32s3/sdio_slave_periph.o
+Compiling .pioenvs/wake-word-test3/bootloader/soc/esp32s3/sdmmc_periph.o
+Compiling .pioenvs/wake-word-test3/bootloader/soc/esp32s3/sigmadelta_periph.o
+Compiling .pioenvs/wake-word-test3/bootloader/soc/esp32s3/spi_periph.o
+Compiling .pioenvs/wake-word-test3/bootloader/soc/esp32s3/timer_periph.o
+Compiling .pioenvs/wake-word-test3/bootloader/soc/esp32s3/touch_sensor_periph.o
+Compiling .pioenvs/wake-word-test3/bootloader/soc/esp32s3/uart_periph.o
+Compiling .pioenvs/wake-word-test3/bootloader/soc/esp32s3/usb_periph.o
+Compiling .pioenvs/wake-word-test3/bootloader/soc/esp32s3/usb_phy_periph.o
+Compiling .pioenvs/wake-word-test3/bootloader/spi_flash/esp32s3/spi_flash_rom_patch.o
+Archiving .pioenvs/wake-word-test3/bootloader/esp-idf/soc/libsoc.a
+Archiving .pioenvs/wake-word-test3/bootloader/esp-idf/spi_flash/libspi_flash.a
+Compiling .pioenvs/wake-word-test3/bootloader/xtensa/eri.o
+Compiling .pioenvs/wake-word-test3/bootloader/xtensa/xt_trax.o
+Generating partitions .pioenvs/wake-word-test3/partitions.bin
+Archiving .pioenvs/wake-word-test3/bootloader/esp-idf/xtensa/libxtensa.a
+Linking .pioenvs/wake-word-test3/bootloader.elf
+Generating an empty partition .pioenvs/wake-word-test3/ota_data_initial.bin
+Compiling .pioenvs/wake-word-test3/liba58/libsodium/crypto_aead/chacha20poly1305/sodium/aead_chacha20poly1305.o
+Building .pioenvs/wake-word-test3/bootloader.bin
+Creating esp32s3 image...
+Successfully created esp32s3 image.
+Compiling .pioenvs/wake-word-test3/liba58/libsodium/crypto_core/ed25519/core_ed25519.o
+Compiling .pioenvs/wake-word-test3/liba58/libsodium/crypto_core/ed25519/core_ristretto255.o
+Compiling .pioenvs/wake-word-test3/liba58/libsodium/crypto_core/ed25519/ref10/ed25519_ref10.o
+Compiling .pioenvs/wake-word-test3/liba58/libsodium/crypto_hash/crypto_hash.o
+Compiling .pioenvs/wake-word-test3/liba58/libsodium/crypto_hash/sha256/cp/hash_sha256_cp.o
+Compiling .pioenvs/wake-word-test3/liba58/libsodium/crypto_hash/sha256/hash_sha256.o
+Compiling .pioenvs/wake-word-test3/liba58/libsodium/crypto_onetimeauth/crypto_onetimeauth.o
+Compiling .pioenvs/wake-word-test3/liba58/libsodium/crypto_onetimeauth/poly1305/donna/poly1305_donna.o
+Compiling .pioenvs/wake-word-test3/liba58/libsodium/crypto_onetimeauth/poly1305/onetimeauth_poly1305.o
+Compiling .pioenvs/wake-word-test3/liba58/libsodium/crypto_scalarmult/crypto_scalarmult.o
+Compiling .pioenvs/wake-word-test3/liba58/libsodium/crypto_scalarmult/curve25519/ref10/x25519_ref10.o
+Compiling .pioenvs/wake-word-test3/liba58/libsodium/crypto_scalarmult/curve25519/scalarmult_curve25519.o
+Compiling .pioenvs/wake-word-test3/liba58/libsodium/crypto_stream/chacha20/ref/chacha20_ref.o
+Compiling .pioenvs/wake-word-test3/liba58/libsodium/crypto_stream/chacha20/stream_chacha20.o
+Compiling .pioenvs/wake-word-test3/liba58/libsodium/crypto_stream/crypto_stream.o
+Compiling .pioenvs/wake-word-test3/liba58/libsodium/crypto_verify/sodium/verify.o
+Compiling .pioenvs/wake-word-test3/liba58/libsodium/sodium/codecs.o
+Compiling .pioenvs/wake-word-test3/liba58/libsodium/sodium/core.o
+Compiling .pioenvs/wake-word-test3/liba58/libsodium/sodium/runtime.o
+Compiling .pioenvs/wake-word-test3/liba58/libsodium/sodium/utils.o
+Compiling .pioenvs/wake-word-test3/libc4e/noise-c/backend/openssl/cipher-aesgcm.o
+Compiling .pioenvs/wake-word-test3/libc4e/noise-c/backend/ref/cipher-aesgcm.o
+Compiling .pioenvs/wake-word-test3/libc4e/noise-c/backend/ref/cipher-chachapoly.o
+Compiling .pioenvs/wake-word-test3/libc4e/noise-c/backend/ref/dh-curve25519.o
+Compiling .pioenvs/wake-word-test3/libc4e/noise-c/backend/ref/hash-blake2b.o
+Compiling .pioenvs/wake-word-test3/libc4e/noise-c/backend/ref/hash-blake2s.o
+Compiling .pioenvs/wake-word-test3/libc4e/noise-c/backend/ref/hash-sha256.o
+Compiling .pioenvs/wake-word-test3/libc4e/noise-c/backend/sodium/cipher-aesgcm.o
+Compiling .pioenvs/wake-word-test3/libc4e/noise-c/backend/sodium/cipher-chachapoly.o
+Compiling .pioenvs/wake-word-test3/libc4e/noise-c/backend/sodium/dh-curve25519.o
+Compiling .pioenvs/wake-word-test3/libc4e/noise-c/backend/sodium/hash-blake2b.o
+Compiling .pioenvs/wake-word-test3/libc4e/noise-c/backend/sodium/hash-sha256.o
+Compiling .pioenvs/wake-word-test3/libc4e/noise-c/crypto/aes/rijndael-alg-fst.o
+Compiling .pioenvs/wake-word-test3/libc4e/noise-c/crypto/blake2/blake2b.o
+Compiling .pioenvs/wake-word-test3/libc4e/noise-c/crypto/blake2/blake2s.o
+Compiling .pioenvs/wake-word-test3/libc4e/noise-c/crypto/chacha/chacha.o
+Compiling .pioenvs/wake-word-test3/libc4e/noise-c/crypto/donna/curve25519-donna-c64.o
+Compiling .pioenvs/wake-word-test3/libc4e/noise-c/crypto/donna/curve25519-donna.o
+Compiling .pioenvs/wake-word-test3/libc4e/noise-c/crypto/donna/poly1305-donna.o
+Compiling .pioenvs/wake-word-test3/libc4e/noise-c/crypto/sha2/sha256.o
+Compiling .pioenvs/wake-word-test3/libc4e/noise-c/crypto/sha2/sha512.o
+Compiling .pioenvs/wake-word-test3/libc4e/noise-c/crypto/x25519/x25519.o
+Compiling .pioenvs/wake-word-test3/libc4e/noise-c/protocol/cipherstate.o
+Archiving .pioenvs/wake-word-test3/liba58/libsodium.a
+Compiling .pioenvs/wake-word-test3/libc4e/noise-c/protocol/dhstate.o
+Compiling .pioenvs/wake-word-test3/libc4e/noise-c/protocol/errors.o
+Compiling .pioenvs/wake-word-test3/libc4e/noise-c/protocol/handshakestate.o
+Compiling .pioenvs/wake-word-test3/libc4e/noise-c/protocol/hashstate.o
+Compiling .pioenvs/wake-word-test3/libc4e/noise-c/protocol/internal.o
+Compiling .pioenvs/wake-word-test3/libc4e/noise-c/protocol/names.o
+Compiling .pioenvs/wake-word-test3/libc4e/noise-c/protocol/patterns.o
+Compiling .pioenvs/wake-word-test3/libc4e/noise-c/protocol/rand_os.o
+Compiling .pioenvs/wake-word-test3/libc4e/noise-c/protocol/rand_sodium.o
+Compiling .pioenvs/wake-word-test3/libc4e/noise-c/protocol/randstate.o
+Compiling .pioenvs/wake-word-test3/libc4e/noise-c/protocol/signstate.o
+Compiling .pioenvs/wake-word-test3/libc4e/noise-c/protocol/symmetricstate.o
+Compiling .pioenvs/wake-word-test3/libc4e/noise-c/protocol/util.o
+Archiving .pioenvs/wake-word-test3/libc4e/libnoise-c.a
+Linking .pioenvs/wake-word-test3/firmware.elf
+RAM:   [=         ]  11.0% (used 36040 bytes from 327680 bytes)
+Flash: [==        ]  16.5% (used 1344045 bytes from 8126464 bytes)
+Building .pioenvs/wake-word-test3/firmware.bin
+Creating esp32s3 image...
+Successfully created esp32s3 image.
+esp32_create_combined_bin([".pioenvs/wake-word-test3/firmware.bin"], [".pioenvs/wake-word-test3/firmware.elf"])
+Wrote 0x1583a0 bytes to file /data/build/wake-word-test3/.pioenvs/wake-word-test3/firmware-factory.bin, ready to flash to offset 0x0
+======================== [SUCCESS] Took 528.39 seconds ========================
+INFO Successfully compiled program.
