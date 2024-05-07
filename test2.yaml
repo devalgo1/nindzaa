@@ -1,0 +1,12 @@
+{
+  "type": "micro",
+  "wake_word": "niinzaa",
+  "author": "devalgo",
+  "website": "https://www.ya.com/",
+  "model": "https://github.com/devalgo1/nindzaa/raw/main/niinzaa.tflite",
+  "version": 1,
+  "micro": {
+    "probability_cutoff": 0.5,
+    "sliding_window_average_size": 10
+  }
+}
