@@ -3,7 +3,7 @@
   "wake_word": "hey jarvis",
   "author": "Kevin Ahrendt",
   "website": "https://www.kevinahrendt.com/",
-  "model": "./nindga.tflite",
+  "model": "./nindg.tflite",
   "version": 1,
   "micro": {
     "probability_cutoff": 0.5,
