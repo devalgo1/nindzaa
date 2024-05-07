@@ -1,6 +1,6 @@
 {
   "type": "micro",
-  "wake_word": "hey jarvis",
+  "wake_word": "nindgaaa",
   "author": "Kevin Ahrendt",
   "website": "https://www.kevinahrendt.com/",
   "model": "./nindg.tflite",
