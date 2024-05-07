@@ -3,7 +3,7 @@
   "wake_word": "nindgaaa",
   "author": "Kevin Ahrendt",
   "website": "https://www.kevinahrendt.com/",
-  "model": "./nindg.tflite",
+  "model": "./nindgaaa.tflite",
   "version": 1,
   "micro": {
     "probability_cutoff": 0.5,
